@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@1.0/nanumbarungothicsubset.css">
+  <link rel="stylesheet" href="../../css/GlobalStyle.css">
+  <link rel="stylesheet" href="../../css/SignUp/SignUp_01.css">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div id="signup01_box">
+      <h1>회원가입_01</h1>
+      <p>- 계정정보 -</p>
+      <form>
+        <div>
+          <input id="signup01_userid" name="userId" type="text" placeholder="아이디"/>
+          <p>아이디를 입력하세요.</p>
+          <div id="userid_error">
+            <img src="../../img/error_icon.svg" />
+            <p>이미 사용중인 아이디입니다.</p>
+          </div>
+        </div>
+        <div>
+          <input id="signup01_nickname" name="nickName" type="text" placeholder="필명"/>
+          <p>필명 혹은 닉네임을 입력하세요.</p>
+          <div id="nickName_error">
+            <img src="../../img/error_icon.svg" />
+            <p>이미 사용중인 필명입니다.</p>
+          </div>
+        </div>
+        <div>
+          <input id="signup01_userpw" name="userPW" type="password" placeholder="비밀번호"/>
+          <p>문자 / 숫자 / 기호조합으로 8자리 이상 입력하세요.</p>
+          <div id="userPW_error">
+            <img src="../../img/error_icon.svg" />
+            <p>비밀번호 조합을 다시한번 확인해주세요. </p>
+          </div>
+        </div>
+        <div>
+          <input id="signup01_pwconfirm" name="PWConfirm" type="password" placeholder="비밀번호 확인"/>
+          <p>입력한 비밀번호를 다시 입력하세요.</p>
+          <div id="PWConfirm_error">
+            <img src="../../img/error_icon.svg" />
+            <p>비밀번호를 다시한번 확인해주세요.</p>
+          </div>
+        </div>
+        <a href="./SignUp_02.html">
+          <button id="signup01_submit" type="submit" disabled>다음</button>
+        </a>
+      </form>
+    </div>
+  </div>
+  <script src="../../js/SignUp/SignUp_01.js"></script>
+</body>
+</html>

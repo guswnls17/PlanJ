@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@1.0/nanumbarungothicsubset.css">
+  <link rel="stylesheet" href="../../css/GlobalStyle.css">
+  <link rel="stylesheet" href="../../css/Find/ChangeFw.css">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div id="changefw_box">
+      <h1>비밀번호 변경</h1>
+      <p>로그인을 위해 비밀번호를 변경해 주세요.</p>
+      <form>
+        <div>
+          <input id="changefw_fw" name="changefw_fw" type="password" placeholder="비밀번호"/>
+          <p>문자 / 숫자 / 기호 조합으로 8자리 이상 입력하세요.</p>
+          <div>
+            <img src="../../img/error_icon.svg" />
+            <p>비밀번호 조합을 다시 한번 확인해주세요.</p>
+          </div>
+        </div>
+        <div>
+          <input id="changefw_confirm" name="changefw_confirm" type="password" placeholder="비밀번호 확인"/>
+          <p>입력한 비밀번호를 다시 입력하세요.</p>
+          <div>
+            <img src="../../img/error_icon.svg" />
+            <p>비밀번호를 다시 한번 확인해주세요.</p>
+          </div>
+        </div>
+        <a>
+          <button id="submit_confirm" type="submit" disabled>변경하기</button>
+        </a>
+      </form>
+    </div>
+  </div>
+  <script src="../../js/Find/ChangeFw.js"></script>
+</body>
+</html>

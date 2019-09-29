@@ -1,0 +1,27 @@
+#find_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+#find_box > img {
+  width: 187px;
+  height: 128px;
+  object-fit: contain;
+
+}
+
+#find_box > h1 {
+  margin-top: 40px;
+  font-size: 30px;
+  color: #000000;
+  font-weight: 400;
+}
+
+#find_box > p {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #979797;
+}

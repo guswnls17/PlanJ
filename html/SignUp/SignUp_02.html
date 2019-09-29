@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@1.0/nanumbarungothicsubset.css">
+  <link rel="stylesheet" href="../../css/GlobalStyle.css">
+  <link rel="stylesheet" href="../../css/SignUp/SignUp_02.css">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div id="signup02_box">
+      <h1>회원가입_02</h1>
+      <p>- 개인정보 -</p>
+      <form>
+        <div>
+          <input id="signup02_username" name="username" type="text" placeholder="이름"/>
+          <p>이름을 입력하세요.</p>
+        </div>
+        <div>
+          <input id="signup02_userdate" name="userdate" type="number" placeholder="생년월일"/>
+          <p>19970102 형태로 입력하세요.</p>
+          <div id="nickName_error">
+            <img src="../../img/error_icon.svg" />
+            <p>생년월일 입력을 다시한번 확인해 주세요.</p>
+          </div>
+        </div>
+        <div>
+          <input id="signup02_useremail" name="useremail" type="email" placeholder="이메일"/>
+          <p>인증시 사용될 이메일 주소입니다.</p>
+          <div id="userPW_error">
+            <img src="../../img/error_icon.svg" />
+            <p>인증시 사용할 정보이니 정확하게 입력해 주세요.</p>
+          </div>
+        </div>
+        <div>
+          <input id="signup02_userphone" name="userphone" type="number" placeholder="핸드폰"/>
+          <p>인증시 사용될 본인명의 연락처입니다.</p>
+          <div id="PWConfirm_error">
+            <img src="../../img/error_icon.svg" />
+            <p>안전한 회원가입을 위해 인증을 해주세요.</p>
+          </div>
+          <button id="certification_button">인증</button>
+        </div>
+        <div>
+          <input id="signup02_certification" name="certification" type="number" placeholder="인증번호"/>
+        </div>
+        <a>
+          <button id="signup02_submit" type="submit" disabled>다음</button>
+        </a>
+      </form>
+    </div>
+
+    <div id="signup02_popup_bg"></div>
+    <div id="signup02_popup">
+      <div>
+        <h1>회원가입 요청 완료</h1>
+        <p>회원가입을 요청했습니다. 관리자 승인시 기재한 메일로 승인완료 메일이 전달됩니다.</p>
+        <div>
+          <a href="../Find/Find.html">
+            <button id="signup02_popup_ok">확인</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/SignUp/SignUp_02.js"></script>
+</body>
+</html>

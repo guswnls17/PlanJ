@@ -1,0 +1,226 @@
+#access_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: url("../../img/bg.svg") repeat center center;
+  background-size: cover;
+  padding-bottom: 50px;
+}
+
+#access_box > h1 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+#access_checkbox{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#access_checkbox > div > p {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+#access_checkbox > div + div {
+  margin-left: 20px;
+}
+
+#access_checkbox > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  position: relative;
+  width: 264px;
+  height: 278px;
+  object-fit: contain;
+  border-radius: 5px;
+  border: solid 1px #979797;
+  background-color: #f9f9f9;
+}
+
+#access_checkbox > div > div > p {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  object-fit: contain;
+  font-size: 9px;
+  font-weight: 200;
+  line-height: 1.56;
+  letter-spacing: -0.2px;
+  color: #000000;
+  overflow: auto;
+  word-break: normal;
+}
+
+#access_checkbox > div > div > p::-webkit-scrollbar {width: 2px; height: 8px; border: 3px solid #fff; }
+#access_checkbox > div > div > p::-webkit-scrollbar-track {background: #efefef; }
+#access_checkbox > div > div > p::-webkit-scrollbar-thumb {height: 50px; width: 50px; background: rgba(0,0,0,.2); }
+
+#access_checkbox > div > div > div {
+  position: absolute;
+  width: 100%;
+  height: 27px;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f8fa;
+}
+
+#access_checkbox > div > div > div > p {
+  font-size: 9px;
+  margin-left: 15px;
+}
+
+#access_checkbox > div > div > div > input {
+  display: none;
+}
+
+#access_checkbox > div > div > div > label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+#access_checkbox > div > div > div > label > img {
+  width: 19px;
+  height: 19px;
+}
+
+#checkbox1:checked + label > #checkbox1_true {
+  display: block;
+}
+#checkbox1:checked + label > #checkbox1_false {
+  display: none;
+}
+ #checkbox1_true {
+  display: none;
+}
+
+#checkbox2:checked + label > #checkbox2_true {
+  display: block;
+}
+#checkbox2:checked + label > #checkbox2_false {
+  display: none;
+}
+#checkbox2_true {
+  display: none;
+}
+
+
+#access_button {
+  margin-top: 50px;
+  display: flex;
+}
+
+#access_button > a:first-child > button {
+  width: 264px;
+  height: 37px;
+  border-radius: 4.1px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+  border: solid 0.2px #000000;
+  background-color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+  border: solid 1px #ddd;
+}
+
+#access_button > a:last-child > button {
+  margin-left: 20px;
+  width: 264px;
+  height: 37px;
+  border-radius: 4.1px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
+  border: solid 1px #ddd;
+}
+
+
+#access_popup_bg {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-color: #000000;
+}
+#access_popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#access_popup > #access_popup_false {
+  padding: 50px;
+  width: 300px;
+  height: 268px;
+  object-fit: contain;
+  border-radius: 4.5px;
+  background-color: #ffffff;
+}
+
+#access_popup > #access_popup_false > h1 {
+  object-fit: contain;
+  font-size: 15px;
+  font-weight: bold;
+  color: #c90000;
+}
+
+#access_popup > #access_popup_false > p {
+  margin-top: 15px;
+  width: 200px;
+  font-size: 12px;
+  line-height: 1.88;
+  color: #6f6f6f;
+}
+
+#access_popup > #access_popup_false > div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#access_popup > #access_popup_false > div > a > button {
+  margin-top: 50px;
+  border: none;
+  outline: none;
+  width: 40px;
+  height: 28px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #888888;
+  font-size: 10px;
+  background-color: white;
+}
+
+#access_popup > #access_popup_false > div > a:first-child > button {
+  border-bottom:1px solid black;
+  color: black;
+  margin-right: 10px;
+}
+
+#access_popup > #access_popup_false > div > a:last-child > button:hover {
+  border-bottom:1px solid black;
+  color: black;
+}

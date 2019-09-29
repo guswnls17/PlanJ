@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@1.0/nanumbarungothicsubset.css">
+  <link rel="stylesheet" href="../../css/GlobalStyle.css">
+  <link rel="stylesheet" href="../../css/Chatting/Chatting.css">
+  <link rel="stylesheet" href="../../css/Chatting/ShareSideList.css">
+  <link rel="stylesheet" href="../../css/Chatting/ChattingSideList.css">
+  <link rel="stylesheet" href="../../css/Chatting/ChattingWindow.css">
+  <script src="../../js/Chatting/Chatting.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div id="chatting_close_popup_bg"></div>
+    <div id="chatting_close_popup">
+      <div id="chatting_close_popup_false">
+        <h1>메세지 전달 취소</h1>
+        <p>메세지 전달을 취소하시면 입력하신 내용이 모두 초기화 됩니다. 전달을 취소하시겠습니까?</p>
+        <div>
+          <a>
+            <button id="chatting_close_popup_cancel">아니요</button>
+          </a>
+          <a>
+            <button id="chatting_close_popup_ok">취소</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="template">
+      <div class="header">
+        <img src="../../img/header_logo.svg"/>
+        <div>
+          <p id="profile_name">북미혼</p>
+          <a>
+            <img src="../../img/logout.svg">
+          </a>
+        </div>
+      </div>
+      <div class="template_body">
+        <div class="side_bar">
+          <ul>
+            <li>
+              <img src="../../img/sidebar_icon1.svg" />
+              <p>캘린더</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon2.svg" />
+              <p>채팅</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon3.svg" />
+              <p>정산/매출</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon4.svg" />
+              <p>가입 승인</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon5.svg" />
+              <p>공지사항</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon6.svg" />
+              <p>계정/비번</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon7.svg" />
+              <p>권한</p>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div id="chatting_box">
+            <div id="chatting_tabbar">
+              <ul>
+                <li id="chatting_tab_choice1" class="chatting_tab_choice">
+                  <img style="width: 28px; display: block;" src="../../img/friends_icon_on.svg">
+                  <img style="width: 28px; display: none;" src="../../img/friends_icon_off.svg">
+                </li>
+                <li id="chatting_tab_choice2">
+                    <img src="../../img/message_icon_on.svg">
+                    <img src="../../img/message_icon_off.svg">
+                </li>
+                <li id="chatting_tab_choice3">
+                    <img src="../../img/share_icon_on.svg">
+                    <img src="../../img/share_icon_off.svg">
+                </li>
+              </ul>
+              <div id="friends_sidelist">
+                <div>
+                  <div>
+                    <input type="text" placeholder="이름 / 이메일로 계정 검색이 가능합니다."/>
+                    <img src="../../img/searching_icon.svg"/>
+                  </div>
+                </div>
+                <div id="friends_sidelist_contents">
+                  <div id="plus_friends">
+                    <div>
+                      <img src="../../img/test_img.jpeg">
+                    </div>
+                    <p>지나지나(유지나)</p>
+                    <div>
+                      <img src="../../img/friends_plus_icon.svg"/>
+                      <img src="../../img/message_icon_off.svg"/>
+                    </div>
+                  </div>
+                  <div id="normal_friends">
+                    <div>
+                      <img src="../../img/test_img.jpeg">
+                    </div>
+                    <p>지나지나(유지나)</p>
+                    <div>
+                      <img src="../../img/friends_plus_icon.svg"/>
+                      <img src="../../img/message_icon_off.svg"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="sidelist_bg">
+                  <img src="../../img/friends_bg.svg">
+                </div>
+                <div class="user_plus_popup">
+                  <div>
+                    <p>[지나지나] 친구목록에 추가 하였습니다.</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div id="chatting_sidelist">
+                <div>
+                  <div>
+                    <input type="text" placeholder="대화목록 검색이 가능합니다."/>
+                    <img src="../../img/searching_icon.svg"/>
+                  </div>
+                </div>
+                <div id="chatting_sidelist_contents">
+                  <div class="chatting_user chatting_user_notice">
+                    <div>
+                      <div>
+                        <img src="../../img/test_img.jpeg">
+                      </div>
+                    </div>
+                    <div>
+                      <h1>일본 추리소설 <단발머리 소녀> 서평</h1>
+                      <div>
+                        <p>게시일 : </p>
+                        <p>2019. 07. 05</p>
+                        <p> - </p>
+                        <p>2019. 07. 19</p>
+                      </div>
+                    </div>
+                    <div>
+                      <p>어제</p>
+                      <div>
+                        <p>2</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chatting_user">
+                    <div>
+                      <div>
+                        <img src="../../img/test_img.jpeg">
+                      </div>
+                    </div>
+                    <div>
+                      <h1>강중사(작가 이름)</h1>
+                      <p>이상미디어에서 또다시 서평 이벤트를 열어주셨습니다. 그랬습니다. 테스트입니다. 생각보다 콘텐츠가 많습니다. 슬픕니다.</p>
+                    </div>
+                    <div>
+                      <p>어제</p>
+                      <div>
+                        <p>2</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chatting_user">
+                    <div>
+                      <div>
+                        <img src="../../img/test_img.jpeg">
+                      </div>
+                    </div>
+                    <div>
+                      <h1>강중사(작가 이름)</h1>
+                      <p>이상미디어에서 또다시 서평 이벤트를 열어주셨습니다. 그랬습니다. 테스트입니다. 생각보다 콘텐츠가 많습니다. 슬픕니다.</p>
+                    </div>
+                    <div>
+                      <p>어제</p>
+                      <div>
+                        <p>2</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sidelist_bg">
+                  <img src="../../img/message_bg.svg">
+                </div>
+                <div class="user_plus_popup">
+                  <div>
+                    <p>[dlekghd] 친구목록에 추가 하였습니다.</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div id="share_sidelist">
+                <div>
+                  <div>
+                    <textarea type="text" placeholder="전달할 메세지를 입력해 주세요." ></textarea>
+                    <img id="share_user_choice_popup_on" src="../../img/menu_icon.svg"/>
+                  </div>
+                </div>
+                <div id="share_sidelist_contents">
+                  <div>
+                    <p>7월 워크샵 일정 메세지 드립니다~!!
+                      혹시 참가 어려우신분은 톡 주세요~!!
+                      장소는 저번 공지 드렸던 내용 그대로이며 7.9.화 - 7.11. 목 입니다~</p>
+                  </div>
+                  <div>
+                    <p>7월 워크샵 일정 메세지 드립니다~!!
+                      혹시 참가 어려우신분은 톡 주세요~!!
+                      장소는 저번 공지 드렸던 내용 그대로이며 7.9.화 - 7.11. 목 입니다~</p>
+                  </div>
+                </div>
+                <div class="sidelist_bg">
+                  <img src="../../img/share_bg.svg">
+                </div>
+              </div>
+
+            </div>
+
+            <div id="chatting_window">
+                <div id="share_user_choice_popup">
+                  <div id="share_user_choice_popup_exit">
+                    <img src="../../img/exit_btn.svg">
+                  </div>
+                  <div>
+                    <button>전체선택</button>
+                    <button>보내기</button>
+                  </div>
+                  <div id="share_user_choice_contents">
+                    <div>
+                      <div>
+                        <img src="../../img/test_img.jpeg"/>
+                      </div>
+                      <p>강중사(작가이름)</p> 
+                      <input id="share_user_checkbox1" type="checkbox"/>
+                      <label for="share_user_checkbox1">
+                        <img src="../../img/share_check.svg"/>
+                      </label>
+                    </div>      
+                    <div>
+                      <div>
+                        <img src="../../img/test_img.jpeg"/>
+                      </div>
+                      <p>강중사(작가이름)</p>
+                      <input id="share_user_checkbox2" type="checkbox"/>
+                      <label for="share_user_checkbox2">
+                        <img src="../../img/share_check.svg"/>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="notice_chatting_window_box">
+                   <div id="notice_chatting_window_box_back">
+                    <img src="../../img/back_btn.svg">
+                    <p>공지사항</p>
+                  </div>
+                  <div id="notice_chatting_contents">
+                    <div id="notice_chatting_contents_item">
+                      <h1>일본 추리소설 <단발머리 소녀> 서평 이벤트 [2019. 7. 14-2019. 7. 19]</h1>
+                      <p>작성일 : 2019. 07. 05 / 게시일 : 2019. 07. 05 - 2019. 07. 19</p>
+                      <p>이상미디어에서 또다시 서평 이벤트를 열어주셨습니다. 총 10분께 서적이 발송될 예정입니다. 권수가 넉넉하여 상당히 높은 확률로 당첨되는 만큼 일본 추리소설에 관심 있으신 작가님들의 많은 참여 부탁드립니다.</p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div id="chatting_window_box">
+                  <div id="chatting_window_box_back">
+                    <img src="../../img/back_btn.svg">
+                    <p>dlekghd(이다홍)</p>
+                  </div>
+                  <div id="register_friend_box">
+                    <img src="../../img/warnin_icon.svg"> 
+                    <p>등록되지 않은 친구입니다. 친구 등록을 하시겠습니까?</p>
+                    <button id="unregister_friend">취소</button>
+                    <button id="register_friend">확인</button>
+                  </div>
+                  <div id="chatting_message_input">
+                      <input id="chatting_message_fileinput" type="file" />
+                      <label for="chatting_message_fileinput">
+                        <img src="../../img/chatting_file_icon.svg"/>
+                      </label>
+                      <input type="text"/>
+                  </div>
+                  <div id="chatting_message_box">
+                    <div>
+                      <div class="opponent">
+                        <div>
+                          <img src="../../img/test_img.jpeg">
+                        </div>
+                        <div>
+                          <p>dlekghd(이다홍)</p>
+                          <div class="opponent_message">
+                            <div>
+                              <p>주말에는 저도 쉬고 싶어요ㅠㅠ 분명히 주말은 쉬는 날인데 왜 쉴 수 없을까여ㅠㅠ 수면시간까지 쪼개서 이게 뭔가여;;</p>
+                              <div class="opponent_time">
+                                  <p>1</p>
+                                  <p>19:31</p>
+                              </div>
+                            </div>
+                            <div>
+                              <p>주말에는 저도 쉬고 싶어요ㅠㅠ 분명히 주말은 쉬는 날인데 왜 쉴 수 없을까여ㅠㅠ 수면시간까지 쪼개서 이게 뭔가여;;</p>
+                              <div class="opponent_time">
+                                  <p>1</p>
+                                  <p>19:31</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="my_message">
+                        <div class="my_message_message">
+                            <div>
+                              <p>주말에는 저도 쉬고 싶어요ㅠㅠ 분명히 주말은 쉬는 날인데 왜 쉴 수 없을까여ㅠㅠ 수면시간까지 쪼개서 이게 뭔가여;;</p>
+                              <div class="my_message_time">
+                                  <p>1</p>
+                                  <p>19:31</p>
+                              </div>
+                            </div>
+                            <div>
+                              <p>주말에는 저도 쉬고 싶어요ㅠㅠ 분명히 주말은 쉬는 날인데 왜 쉴 수 없을까여ㅠㅠ 수면시간까지 쪼개서 이게 뭔가여;;</p>
+                              <div class="my_message_time">
+                                  <p>1</p>
+                                  <p>19:31</p>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="opponent">
+                          <div>
+                            <img src="../../img/test_img.jpeg">
+                          </div>
+                          <div>
+                            <p>dlekghd(이다홍)</p>
+                            <div class="opponent_message">
+                              <div>
+                                <p>주말에는 저도 쉬고 싶어요ㅠㅠ 분명히 주말은 쉬는 날인데 왜 쉴 수 없을까여ㅠㅠ 수면시간까지 쪼개서 이게 뭔가여;;</p>
+                                <div class="opponent_time">
+                                    <p>1</p>
+                                    <p>19:31</p>
+                                </div>
+                              </div>
+                              <div>
+                                <p>주말에는 저도 쉬고 싶어요ㅠㅠ 분명히 주말은 쉬는 날인데 왜 쉴 수 없을까여ㅠㅠ 수면시간까지 쪼개서 이게 뭔가여;;</p>
+                                <div class="opponent_time">
+                                    <p>1</p>
+                                    <p>19:31</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                
+                  </div>
+                </div>
+                <div id="chatting_window_box_bg">
+                  <img src="../../img/talk_bg.svg"/>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="template_footer">
+        <div>
+          <img src="../../img/header_logo.svg"/>
+          <div>
+            <ul>
+              <li>(주)작가컴퍼니</li>
+              <li>대표자 : 최조은</li>
+              <li>개인정보보호책임자 : 최조은</li>
+              <li>사업자등록번호 : 440-81-00793</li>
+            </ul>
+            <ul>
+              <li>서울특별시 마포구 양화로6길 57-10, 3층(서교동)</li>
+              <li>moon@jakgacompany.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

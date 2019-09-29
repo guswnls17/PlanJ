@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <link href='../../js/FullCalendar/fullcalendar-4.3.1/packages/core/main.css' rel='stylesheet' />
+  <link href='../../js/FullCalendar/fullcalendar-4.3.1/packages/daygrid/main.css' rel='stylesheet' />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@1.0/nanumbarungothicsubset.css">
+  <link rel="stylesheet" href="../../css/GlobalStyle.css">
+  <link rel="stylesheet" href="../../css/Calendar/Calender.css">
+  <link rel="stylesheet" href="../../css/Calendar/FullCalender.css">
+  <link rel="stylesheet" href="../../css/Calendar/AddPopup.css">
+  <link rel="stylesheet" href="../../css/Calendar/CalenderList.css">
+
+  <script src='../../js/FullCalendar/fullcalendar-4.3.1/packages/core/main.js'></script>
+  <script src='../../js/FullCalendar/fullcalendar-4.3.1/packages/daygrid/main.js'></script>
+  <script src="../../js/Calendar/Calender.js"></script>
+</head>
+<body>
+  <div class="container">
+      <div id="calender_close_popup_bg"></div>
+      <div id="calender_close_popup">
+        <div id="calender_close_popup_false">
+          <h1>일정 추가 취소</h1>
+          <p>일정 추가를 취소하시면 입력하신 내용이 모두 초기화 됩니다. 일정 추가를 취소하시겠습니까?</p>
+          <div>
+            <a>
+              <button id="calender_close_popup_cancel">아니요</button>
+            </a>
+            <a>
+              <button id="calender_close_popup_ok">취소</button>
+            </a>
+          </div>
+        </div>
+    </div>
+    <div class="template">
+      <div class="header">
+        <img src="../../img/header_logo.svg"/>
+        <div>
+          <p id="profile_name">북미혼</p>
+          <a>
+            <img src="../../img/logout.svg">
+          </a>
+        </div>
+      </div>
+      <div class="template_body">
+        <div class="side_bar">
+          <ul>
+            <li>
+              <img src="../../img/sidebar_icon1.svg" />
+              <p>캘린더</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon2.svg" />
+              <p>채팅</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon3.svg" />
+              <p>정산/매출</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon4.svg" />
+              <p>가입 승인</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon5.svg" />
+              <p>공지사항</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon6.svg" />
+              <p>계정/비번</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon7.svg" />
+              <p>권한</p>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div id="calender_box">
+            <div id="calender_section">
+                <div id='calendar'>
+                  <div id="next_button">
+                    <img id="prev_btn" src="../../img/prev.svg">
+                    <img id="next_btn" src="../../img/next.svg">
+                  </div>
+                  <div id="add_popup">
+                    <form>
+                      <img id="add_popup_close" src="../../img/exit_btn.svg">
+                      <input id="add_title_input" type="text" placeholder="제목 및 일정 추가"/>
+                      <div id="add_color_btn">
+                        <button>공지사항</button>
+                        <button>이벤트</button>
+                        <button>작가</button>
+                        <button id="add_category">+카테고리</button>
+                      </div>
+                      <div id="add_time">
+                        <p>시간</p>
+                        <div>
+                          <input type="text" placeholder="2019년 7월 1일 09 : 00">
+                          <p>에서</p>
+                          <input type="text" placeholder="2019년 7월 1일 10 : 00">
+                          <p>까지</p>
+                        </div>
+                      </div>
+                      <div id="add_seb_text">
+                        <p>설명</p>
+                        <input type=text placeholder="설명 추가">
+                      </div>
+                      <button type="submit">저장</button>
+                      <div id="add_popup_color">
+                        <div>
+                          <input placeholder="카테고리 이름"/>
+                        </div>
+                        <div>
+                          <div>
+                            <input id="add_pink" checked="checked" type="radio" name="add_popup_choice"/>
+                            <label for="add_pink">
+                              <div style="background-color: #fa0097"></div>
+                            </label>
+                          </div>
+                          <div>
+                            <input id="add_yellow" type="radio" name="add_popup_choice"/>
+                            <label for="add_yellow">
+                              <div  style="background-color: #f7b500"></div>
+                            </label>
+                          </div>
+                          <div>
+                            <input id="add_green" type="radio" name="add_popup_choice"/>
+                            <label for="add_green">
+                              <div style="background-color: #6dd400"></div>
+                            </label>
+                          </div>
+                          <div>
+                            <input id="add_blue" type="radio" name="add_popup_choice"/>
+                            <label for="add_blue">
+                              <div style="background-color: #2042e0"></div>
+                            </label>
+                          </div>
+                          <div>
+                            <input id="add_purple" type="radio" name="add_popup_choice"/>
+                            <label for="add_purple">
+                              <div style="background-color: #6236ff"></div>
+                            </label>
+                          </div>
+                          <div>
+                            <input id="add_black" type="radio" name="add_popup_choice"/>
+                            <label for="add_black">
+                              <div style="background-color: #000000"></div>
+                            </label>
+                          </div>
+                          <div>
+                            <input id="add_grey" type="radio" name="add_popup_choice"/>
+                            <label for="add_grey">
+                              <div style="background-color: #6d7278"></div>
+                            </label>
+                          </div>
+                          <div>
+                            <input id="add_white" type="radio" name="add_popup_choice"/>
+                            <label for="add_white">
+                              <div  style="background-color: #fff"></div>
+                            </label>
+                          </div>
+                          <div id="color_add_btn">
+                            <p>+</p>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+            </div>
+            <div id="calender_list">
+              <div>
+                <div>
+                  <h1>2019.7.1 일정목록</h1>
+                </div>
+                <div id="calendar_list_contents">
+                  <div>
+                    <div>
+                      <div></div>
+                      <p>Notice</p>
+                    </div>
+                    <div>
+                      <h1>일본 추리소설 <단발머리 소녀> 서평</h1>
+                      <p>2019.7.1 - 2019.7.5</p>
+                      <p></p>
+                      <p>이상미디어에서 또다시 서평 이벤트를 열어주셨습니다. 총 10분께 서적이 발송될 예정입니다. 권수가 넉넉하여 상당히 높은 확률로 당첨되는 만큼 일본 추리소설에 관심 있으신 작가님들의 많은 참여 부탁드립니다.</p>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div style="background-color: #17cfa6"></div>
+                      <p>Meeting</p>
+                    </div>
+                    <div>
+                      <h1>메론사탕(작가이름) 작품검수</h1>
+                      <p>2019.7.1</p>
+                      <p>09:00 - 11:00</p>
+                      <p>대표님, 담당자님, 작품A 작가님 미팅</p>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div style="background-color: #00aded"></div>
+                      <p>Event</p>
+                    </div>
+                    <div>
+                      <h1>작품B 감사 이벤트</h1>
+                      <p>2019.7.1 - 2019.7.3</p>
+                      <p>11:00 - 15:00</p>
+                      <p>영풍문고 작품B 작가님 팬사인회 행사</p>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div style="background-color: #00aded"></div>
+                      <p>Event</p>
+                    </div>
+                    <div>
+                      <h1>작품C 감사 이벤트</h1>
+                      <p>2019.7.1</p>
+                      <p>18:00 - 20:00</p>
+                      <p>작품B 작가님 강연행사</p>
+                    </div>
+                  </div>
+                </div>
+                <div id="calendar_list_contents_line"></div>
+              </div>
+            </div>
+            <form id="profile_popup">
+              <div>
+                <img id="profile_popup_close" src="../../img/exit_btn.svg"/>
+              </div>
+              <div>
+                <div>
+                  <img src="../../img/profile_img.svg">
+                  <img src="../../img/test_img.jpeg"/>
+                </div>
+                <div>
+                  <input id="profile_file" type="file" />
+                  <label for="profile_file">
+                    <img src="../../img/photo_btn.svg">
+                  </label>
+                  <button>삭제</button>
+                </div>
+              </div>
+              <div>
+                <button>저장</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="template_footer">
+        <div>
+          <img src="../../img/header_logo.svg"/>
+          <div>
+            <ul>
+              <li>(주)작가컴퍼니</li>
+              <li>대표자 : 최조은</li>
+              <li>개인정보보호책임자 : 최조은</li>
+              <li>사업자등록번호 : 440-81-00793</li>
+            </ul>
+            <ul>
+              <li>서울특별시 마포구 양화로6길 57-10, 3층(서교동)</li>
+              <li>moon@jakgacompany.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

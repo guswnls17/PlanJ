@@ -1,0 +1,189 @@
+#calendar {
+  margin-top: 15px;
+  position: relative;
+}
+
+.fc-view-container {
+  margin-top: 15px;
+}
+
+.fc-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fc-left > h2 {
+  margin-left: 25px;
+  font-size: 14px;
+}
+
+.fc-icon {
+  width: 10px;
+  height: 5px;
+  color: black;
+  vertical-align: auto;
+}
+
+
+.fc-right {
+  margin-right: 25px;
+  width: 150px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 5px;
+  background-color: #00aded;
+  border: none;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.fc-right > button {
+  background-color: #00aded;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-size: 11px;
+  outline: none;
+}
+
+#next_button{
+  position: absolute;
+  top: 5px;
+  left: 120px;
+  display: flex
+}
+
+#next_button > img {
+  height: 12px;
+  width: 12px;
+  cursor: pointer;
+}
+
+#next_button > img + img {
+  margin-left: 10px;
+}
+
+.fc th {
+  background-color: #f6f8fa;
+  padding: 10px 0;
+}
+
+.fc th > span {
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.fc-day-top .fc-tue .fc-other-month .fc-past {
+  margin: auto;
+}
+
+.fc-dayGrid-view .fc-week-number, .fc-dayGrid-view .fc-day-number {
+  margin-top: 2px;
+  padding-top: 4px;
+  margin-right: calc(50% - 10px);
+  width: 16px;
+  height: 14px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.fc-sun > span {
+  color: #ff0000;
+}
+
+.fc-sat > span {
+  color: #0000ff;
+}
+
+.fc-toolbar.fc-header-toolbar {
+  margin-bottom: 5px;
+}
+
+.fc-ltr .fc-dayGrid-view .fc-day-top .fc-day-number {
+  font-size: 10px;
+}
+
+.fc-title {
+  font-size: 10px;
+}
+
+.fc-time {
+  font-size: 10px;
+}
+
+.fc-content {
+  padding-left: 4px;
+}
+
+.fc-unthemed .fc-popover {
+  min-width: 220px;
+  width: auto;
+  border-radius: 20px;
+  padding-bottom: 10px;
+  height: auto;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.fc-unthemed .fc-popover::-webkit-scrollbar {display: none; }
+
+.fc-day-grid-event {
+  overflow: auto;
+  padding: 0 3px;
+}
+
+.fc-more-cell {
+  padding: 0 4px;
+}
+
+a.fc-more {
+  font-size: 10px;
+}
+
+.fc-popover .fc-header {
+  height: 32px;
+}
+
+.fc-header > .fc-title {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.fc-unthemed .fc-divider, .fc-unthemed .fc-popover .fc-header, .fc-unthemed .fc-list-heading td {
+  background-color: white;
+}
+
+.fc-icon-x:before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.fc-more-popover .fc-event-container > a {
+  margin-top: 5px;
+}
+
+.fc-more-cell > div {
+  background-color: #e5e5e5 !important; margin-top: 2px !important; width: 100% !important; border-radius: 2px !important
+}
+
+.fc-more-cell {
+  padding: 0 2px !important;
+}
+
+.fc-more {
+  width: 100%;
+}

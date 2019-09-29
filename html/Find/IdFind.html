@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@1.0/nanumbarungothicsubset.css">
+  <link rel="stylesheet" href="../../css/GlobalStyle.css">
+  <link rel="stylesheet" href="../../css/Find/IdFind.css">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div id="idfind_box">
+      <h1>- 아이디 찾기 -</h1>
+      <form>
+        <div>
+          <input id="idfind_name" name="idfind_name" type="text" placeholder="이름"/>
+          <p>이름을 입력하세요.</p>
+        </div>
+        <div>
+          <input id="idfind_date" name="idfind_date" type="number" placeholder="생년월일"/>
+          <p>19970102 형태로 입력하세요.</p>
+          <div id="idfind_date_error">
+            <img src="../../img/error_icon.svg" />
+            <p>형식에 맞지 않는 생년월일 입력입니다.</p>
+          </div>
+        </div>
+        <div>
+          <input id="idfind_email" name="idfind_email" type="email" placeholder="이메일"/>
+          <p>가입시 기재한 이메일 주소를 입력하세요.</p>
+          <div id="idfind_email_error">
+            <img src="../../img/error_icon.svg" />
+            <p>이메일 주소를 다시 한번 확인해 주세요.</p>
+          </div>
+        </div>
+        <a>
+          <button id="idfind_submit" type="submit" disabled>다음</button>
+        </a>
+      </form>
+    </div>
+    <div id="idfind_popup_bg"></div>
+    <div id="idfind_popup_01" class="idfind_popup">
+      <div>
+        <h1>정보확인 완료</h1>
+        <p>입력한 정보를 확인했습니다.</p>
+        <p id="id_text">아이디 : author1</p>
+        <div>
+          <a href="./Find.html">
+            <button id="idfind_popup_01_ok">확인</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="idfind_popup_02" class="idfind_popup">
+      <div>
+        <h1>정보확인 불가</h1>
+        <p>입력한 정보가 일치하지 않습니다. 정보를 확인 후 다시 시도하세요.</p>
+        <div>
+          <a>
+            <button id="idfind_popup_02_ok">확인</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/Find/IdFind.js"></script>
+</body>
+</html>

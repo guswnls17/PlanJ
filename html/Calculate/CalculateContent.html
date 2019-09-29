@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@1.0/nanumbarungothicsubset.css">
+  <link rel="stylesheet" href="../../css/GlobalStyle.css">
+  <link rel="stylesheet" href="../../css/Calculate/Calculate.css">
+  <link rel="stylesheet" href="../../css/Calculate/CalculateContent.css">
+  <script src="../../js/Calculate/Calculate.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="template">
+      <div class="header">
+        <img src="../../img/header_logo.svg"/>
+        <div>
+          <p id="profile_name">북미혼</p>
+          <a>
+            <img src="../../img/logout.svg">
+          </a>
+        </div>
+      </div>
+      <div class="template_body">
+        <div class="side_bar">
+          <ul>
+            <li>
+              <img src="../../img/sidebar_icon1.svg" />
+              <p>캘린더</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon2.svg" />
+              <p>채팅</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon3.svg" />
+              <p>정산/매출</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon4.svg" />
+              <p>가입 승인</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon5.svg" />
+              <p>공지사항</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon6.svg" />
+              <p>계정/비번</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon7.svg" />
+              <p>권한</p>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div id="calculate_box"> 
+            <ul>
+              <li id="calculate_tab_choice1" class="calculate_tab_choice">
+                <p>정산</p>
+              </li>
+              <li id="calculate_tab_choice2">
+                <p>매출</p>
+              </li>
+            </ul>
+
+            <!-- 정산박스 -->
+            <div id="calculate_contents_box">
+
+              <!-- 슬라이더 -->
+              <div id="platform_list">
+                <img id="platform_list_prev" src="../../img/prev.svg">
+                <div id="platform_list_width">
+                  <div>
+                    <p class="platform_list_choice">전체</p>
+                    <p>카카오페이지(선)</p>
+                    <p>네이버</p>
+                    <p>네이버</p>
+                    <p>카카오</p>
+                    <p>네이버</p>
+                    <p>카카오</p>
+                    <p>네이버</p>
+                    <p>카카오</p>
+                    <p>네이버</p>
+                    <p>카카오</p>
+                    <p>카카오</p>
+                    <p>네이버</p>
+                    <p>카카오</p>
+                    <p>네이버</p>
+                    <p>네이버</p>
+                    <p>카카오</p>
+                    <p>네이버</p>
+                    <p>네이버</p>
+                  </div>
+                </div>
+                <img id="platform_list_next" src="../../img/next.svg">
+              </div>
+              <div id="calculate_contents_box_template">
+                <!-- 유저리스트 -->
+                <div id="calculate_userlist">
+                  <div class="calculate_user_profile">
+                    <div>
+                      <img src="../../img/test_img.jpeg">
+                    </div>
+                    <div> 
+                      <h1>강중사(작가이름)</h1>
+                      <p>정산일 : 매월 10일 </p>
+                    </div>
+                  </div>
+                  <div class="calculate_user_profile">
+                    <div>
+                      <img src="../../img/test_img.jpeg">
+                    </div>
+                    <div>
+                      <h1>강중사(작가이름)</h1>
+                      <p>정산일 : 매월 10일 </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- 정산파일리스트 -->
+                <div id="calculate_file_box">
+                  <div id="file_none">
+                    <img src="../../img/none_icon.svg">
+                    <p>내용이 없습니다.</p>
+                  </div>
+                  <div id="calculate_file">
+                    <div id="calculate_back">
+                      <img src="../../img/back_btn.svg">
+                      <p>달빛물든 (작가이름)</p>
+                    </div>
+                    <div id="calculate_file_none">
+                      <img src="../../img/none_icon.svg">
+                      <p>내용이 없습니다.</p>
+                    </div>
+                    <div id="calculate_list">
+                      <div>
+                        <div id="calculate_list_input">
+                          <input id="calculate_file_name" disabled placeholder="정산 파일을 불러오세요"/>
+                          <label for="calculate_file_input">불러오기</label>
+                          <input id="calculate_file_input" type="file"/>
+                        </div>
+                        <div id="calculate_list_tabel">
+                          <div id="calculate_list_header" >
+                            <ul>
+                              <li>날짜</li>
+                              <li>플랫폼</li>
+                              <li>작품</li>
+                              <li>판매금액</li>
+                              <li>입금</li>
+                              <li>작가 컴퍼니</li>
+                              <li>원지금액</li>
+                              <li>원천징수</li>
+                              <li>실지금액</li>
+                            </ul>
+                          </div>
+                          <div id="calculate_list_body" >
+                            <ul>
+                              <li>2019.7</li>
+                              <li>네이버</li>
+                              <li>황제의 후손으로 태
+                                  어났습니다.</li>
+                              <li>￦100,000</li>
+                              <li>￦70,000</li>
+                              <li>￦14,000</li>
+                              <li>￦14,000</li>
+                              <li>￦1,848</li>
+                              <li>￦100,000</li>
+                            </ul>
+                          </div>
+                          <div id="calculate_list_body" >
+                            <ul>
+                              <li>2019.7</li>
+                              <li>네이버</li>
+                              <li>황제의 후손으로 태
+                                  어났습니다.</li>
+                              <li>￦100,000</li>
+                              <li>￦70,000</li>
+                              <li>￦14,000</li>
+                              <li>￦14,000</li>
+                              <li>￦1,848</li>
+                              <li>￦100,000</li>
+                            </ul>
+                          </div>
+                          <div id="calculate_list_body" >
+                            <ul>
+                              <li>2019.7</li>
+                              <li>네이버</li>
+                              <li>황제의 후손으로 태
+                                  어났습니다.</li>
+                              <li>￦100,000</li>
+                              <li>￦70,000</li>
+                              <li>￦14,000</li>
+                              <li>￦14,000</li>
+                              <li>￦1,848</li>
+                              <li>￦100,000</li>
+                            </ul>
+                          </div>
+                          <div id="calculate_list_body" >
+                            <ul>
+                              <li>2019.7</li>
+                              <li>네이버</li>
+                              <li>황제의 후손으로 태
+                                  어났습니다.</li>
+                              <li>￦100,000</li>
+                              <li>￦70,000</li>
+                              <li>￦14,000</li>
+                              <li>￦14,000</li>
+                              <li>￦1,848</li>
+                              <li>￦100,000</li>
+                            </ul>
+                          </div>
+                          <div id="calculate_list_body" >
+                            <ul>
+                              <li>2019.7</li>
+                              <li>네이버</li>
+                              <li>황제의 후손으로 태
+                                  어났습니다.</li>
+                              <li>￦100,000</li>
+                              <li>￦70,000</li>
+                              <li>￦14,000</li>
+                              <li>￦14,000</li>
+                              <li>￦1,848</li>
+                              <li>￦100,000</li>
+                            </ul>
+                          </div>
+                          <div id="calculate_list_body" >
+                            <ul>
+                              <li>2019.7</li>
+                              <li>네이버</li>
+                              <li>황제의 후손으로 태
+                                  어났습니다.</li>
+                              <li>￦100,000</li>
+                              <li>￦70,000</li>
+                              <li>￦14,000</li>
+                              <li>￦14,000</li>
+                              <li>￦1,848</li>
+                              <li>￦100,000</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div id="file_list_btn">
+                          <button>저장</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="calculate_saved">
+                      <img src="../../img/save_check.svg">
+                      <p>[달빛물든] 정산파일 저장이 완료 되었습니다.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="calculate_contents_box_bg">
+                <img src="../../img/calculate_contents_box_bg.svg">
+              </div>
+            </div>
+
+            <!-- 매출박스 -->
+            <div id="sales_contents_box">
+              <div class="calculate_contents_box_bg">
+                <img src="../../img/calculate_contents_box_bg.svg">
+              </div>
+              <div id="sales_contents_page">
+                <div id="sales_contents_date">
+                  <div>
+                    <p>2019년 7월</p>
+                    <img src="../../img/prev.svg">
+                    <img src="../../img/next.svg">
+                  </div>
+                </div>
+                <div id="sales_contents_list">
+                  <div>
+                    <div>
+                      <div>
+                        <h1>매출</h1>
+                        <p>₩100,000</p>
+                      </div>
+                      <div>
+                        <h1>입금</h1>
+                        <p>₩100,000</p>
+                      </div>
+                      <div>
+                        <h1>작가 컴퍼니</h1>
+                        <p>₩100,000</p>
+                      </div>
+                      <div>
+                        <h1>원지급</h1>
+                        <p>₩100,000</p>
+                      </div>
+                    </div>
+                    <div id="sales_contents_list_table">
+                      <div>
+                        <P id="platform_choice" class="sales_contents_list_table_choice">플랫폼</P>
+                        <p>|</p>
+                        <p id="writer_choice">작가</p>
+                      </div>
+  
+                      <div id="sales_contents_list_table_platform">
+                        <div class="sales_contents_list_table_header" >
+                          <ul>
+                            <li>플랫폼</li>
+                            <li>매출</li>
+                            <li>입금</li>
+                            <li>작가 컴퍼니</li>
+                            <li>원지금</li>
+                          </ul>
+                        </div>
+                        <div class="sales_contents_list_table_body" >
+                          <ul>
+                            <li>교보문고</li>
+                            <li>￦100,000</li>
+                            <li>￦100,000</li>
+                            <li>￦100,000</li>
+                            <li>￦100,000</li>
+                          </ul>
+                        </div>
+                        <div class="sales_contents_list_table_body" >
+                          <ul>
+                            <li>교보문고</li>
+                            <li>￦100,000</li>
+                            <li>￦100,000</li>
+                            <li>￦100,000</li>
+                            <li>￦100,000</li>
+                          </ul>
+                        </div>
+                        <div class="sales_contents_list_table_body" >
+                          <ul>
+                            <li>교보문고</li>
+                            <li>￦100,000</li>
+                            <li>￦100,000</li>
+                            <li>￦100,000</li>
+                            <li>￦100,000</li>
+                          </ul>
+                        </div>
+                      </div>
+  
+                      <div id="sales_contents_list_table_writer">
+                        <div class="sales_contents_list_table_header" >
+                            <ul>
+                              <li>작가</li>
+                              <li>매출</li>
+                              <li>입금</li>
+                              <li>작가 컴퍼니</li>
+                              <li>원지금</li>
+                            </ul>
+                          </div>
+                          <div class="sales_contents_list_table_body" >
+                            <ul>
+                              <li>안수영</li>
+                              <li>￦100,000</li>
+                              <li>￦100,000</li>
+                              <li>￦100,000</li>
+                              <li>￦100,000</li>
+                            </ul>
+                          </div>
+                          <div class="sales_contents_list_table_body" >
+                            <ul>
+                              <li>안수영</li>
+                              <li>￦100,000</li>
+                              <li>￦100,000</li>
+                              <li>￦100,000</li>
+                              <li>￦100,000</li>
+                            </ul>
+                          </div>
+                          <div class="sales_contents_list_table_body" >
+                            <ul>
+                              <li>안수영</li>
+                              <li>￦100,000</li>
+                              <li>￦100,000</li>
+                              <li>￦100,000</li>
+                              <li>￦100,000</li>
+                            </ul>
+                          </div>
+                      </div>
+  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+   
+        </div>
+      </div>
+      <div class="template_footer">
+        <div>
+          <img src="../../img/header_logo.svg"/>
+          <div>
+            <ul>
+              <li>(주)작가컴퍼니</li>
+              <li>대표자 : 최조은</li>
+              <li>개인정보보호책임자 : 최조은</li>
+              <li>사업자등록번호 : 440-81-00793</li>
+            </ul>
+            <ul>
+              <li>서울특별시 마포구 양화로6길 57-10, 3층(서교동)</li>
+              <li>moon@jakgacompany.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

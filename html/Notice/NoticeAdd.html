@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@1.0/nanumbarungothicsubset.css">
+  <link rel="stylesheet" href="../../css/GlobalStyle.css">
+  <link rel="stylesheet" href="../../css/Notice/NoticeAdd.css">
+  <script src="../../js/Notice/Notice.js"></script>
+</head>
+<body>
+  <div class="container">
+
+    <div id="notice_popup_bg"></div>
+    <div class="notice_popup" id="notice_add_cancel">
+      <div class="notice_popup_box">
+        <h1>공지사항 작성 취소</h1>
+        <p>공지사항 작성 취소시 입력한 내용은 모두 초기화됩니다. 작성을 취소하겠습니까?</p>
+        <div>
+          <a>
+            <button id="notice_close_popup_cancel">아니요</button>
+          </a>
+          <a>
+            <button id="notice_close_popup_ok">취소</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="notice_popup" id="notice_add_ok">
+      <div class="notice_popup_box">
+        <h1>공지사항 등록</h1>
+        <p>작성한 내용을 공지사항으로 등록 하겠습니까?</p>
+        <div>
+          <a>
+            <button id="notice_ok_popup_cancel">아니요</button>
+          </a>
+          <a>
+            <button id="notice_ok_popup_ok">등록</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="template">
+      <div class="header">
+        <img src="../../img/header_logo.svg"/>
+        <div>
+          <p id="profile_name">북미혼</p>
+          <a>
+            <img src="../../img/logout.svg">
+          </a>
+        </div>
+      </div>
+      <div class="template_body">
+        <div class="side_bar">
+          <ul>
+            <li>
+              <img src="../../img/sidebar_icon1.svg" />
+              <p>캘린더</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon2.svg" />
+              <p>채팅</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon3.svg" />
+              <p>정산/매출</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon4.svg" />
+              <p>가입 승인</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon5.svg" />
+              <p>공지사항</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon6.svg" />
+              <p>계정/비번</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon7.svg" />
+              <p>권한</p>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          
+          <div id="notice_add_box"> 
+            <div id="notice_add_back">
+              <img src="../../img/add_back_btn.svg"/>
+            </div>
+            <h1>
+              공지사항 등록
+            </h1>
+            <form>
+              <div id="notice_add_title">
+                <p>제목:</p>
+                <input type="text" placeholder="제목을 입력해주세요(30자 이내)" required/>
+                <p>관리자공개</p>
+                <input id="admin_checkbox" type="checkbox" />
+                <label for="admin_checkbox">
+                  <img src="../../img/share_check.svg"/>
+                </label>
+                <p>전체공개</p>
+                <input id="all_checkbox" type="checkbox" />
+                <label for="all_checkbox">
+                  <img src="../../img/share_check.svg"/>
+                </label>
+              </div>
+              <div id="notice_add_date">
+                <p>공지 게시일:</p>
+                <div>
+                  <p>시작</p>
+                  <input placeholder="2019년 7월 1일 09 : 00" />
+                </div>
+                <img src="../../img/add_data_img.svg" />
+                <div>
+                  <p>종료</p>
+                  <input placeholder="2019년 7월 1일 10 : 00" />
+                </div>
+              </div>
+              <div id="notice_textarea">
+                <textarea placeholder="내용을 입력해 주세요.(150자 이내)"></textarea>
+              </div>
+              <button id="notice_add_submit" type="submit">+ 등록하기</button>
+            </form>
+
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="template_footer">
+        <div>
+          <img src="../../img/header_logo.svg"/>
+          <div>
+            <ul>
+              <li>(주)작가컴퍼니</li>
+              <li>대표자 : 최조은</li>
+              <li>개인정보보호책임자 : 최조은</li>
+              <li>사업자등록번호 : 440-81-00793</li>
+            </ul>
+            <ul>
+              <li>서울특별시 마포구 양화로6길 57-10, 3층(서교동)</li>
+              <li>moon@jakgacompany.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

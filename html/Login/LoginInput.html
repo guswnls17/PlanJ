@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@1.0/nanumbarungothicsubset.css">
+  <link rel="stylesheet" href="../../css/GlobalStyle.css">
+  <link rel="stylesheet" href="../../css/Login/LoginInput.css">
+  <script src="../../js/Login/Login.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div id="logininput_box">
+      <img src="../../img/logo.svg">
+      <img src="../../img/textlogo.svg">
+      <form>
+        <div id="id_box">
+          <img src="../../img/id_icon.svg" />
+          <input name="userID" type="text" placeholder="아이디" required/>
+          <div>
+            <img src="../../img/error_icon.svg"/>
+            <p>이미 사용중인 아이디입니다.</p>
+          </div>
+        </div>
+        <div id="pw_box">
+          <img src="../../img/pw_icon.svg"/>
+          <input name="userPW" type="password" placeholder="비밀번호" required />
+          <div>
+            <img src="../../img/error_icon.svg"/>
+            <p>이미 사용중인 아이디입니다.</p>
+          </div>
+        </div>
+        <button id="login_button" type="submit" disabled>로그인</button>
+      </form>
+      <div id="find_button">
+        <a>
+          <p>아이디 / 비밀번호 찾기</p>
+        </a>
+        <a href="../SignUp/AccountRegistration.html">
+          <p>회원가입</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

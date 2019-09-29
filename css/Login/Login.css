@@ -1,0 +1,77 @@
+
+#login_box {
+  background: url("../../img/bg.svg") repeat center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: url("../../img/bg.svg") repeat center center;
+  background-size: cover;
+  padding-bottom: 50px;
+}
+
+#login_box > img:nth-child(1) {
+  width: 50px;
+}
+
+#login_box > img:nth-child(2) {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+
+#login_box > div > h1 {
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 400;
+}
+
+#login_adminButton {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#login_adminButton > a > button {
+  width: 264px;
+  height: 37px;
+  object-fit: contain;
+  border-radius: 4.1px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
+  border: solid 1px #ddd;
+}
+
+#login_adminButton > p {
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+  font-size: 10px;
+  color: #979797;
+}
+
+#login_userButton > a > button {
+  margin-top: 10px;
+  width: 264px;
+  height: 37px;
+  object-fit: contain;
+  border-radius: 4.1px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+  font-size: 15px;
+  color: black;
+  cursor: pointer;
+  border: solid 1px #ddd;
+}
+
+#login_box button:hover {
+  background-color: #32346e;
+  color: white;
+}

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@1.0/nanumbarungothicsubset.css">
+  <link rel="stylesheet" href="../../css/GlobalStyle.css">
+  <link rel="stylesheet" href="../../css/Authority/Authority.css">
+  <script src="../../js/Authority/Authority.js"></script>
+</head>
+<body>
+  <div class="container">
+
+      <div id="authority_popup_bg"></div>
+      <div class="authority_popup" id="authority_add_ok">
+        <div class="authority_popup_box">
+          <h1>관리자 등록</h1>
+          <p>[샹크스]관리자 등록시 해당 사용자에게 확인메일이 자동 발송됩니다. 등록 하겠습니까?</p>
+          <div>
+            <a>
+              <button id="authority_popup_ok">확인</button>
+            </a>
+            <a>
+              <button id="authority_popup_no">취소</button>
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="authority_popup" id="authority_add_delete">
+        <div class="authority_popup_box">
+          <h1>관리자 삭제</h1>
+          <p>[샹크스]삭제시 해당 사용자는 관리자 모드로 로그인할 수 없습니다. 삭제 하겠습니까?</p>
+          <div>
+            <a>
+              <button id="authority_popup_delete_ok">확인</button>
+            </a>
+            <a>
+              <button id="authority_popup_delete_no">취소</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    <div class="template">
+      <div class="header">
+        <img src="../../img/header_logo.svg"/>
+        <div>
+          <p id="profile_name">북미혼</p>
+          <a>
+            <img src="../../img/logout.svg">
+          </a>
+        </div>
+      </div>
+      <div class="template_body">
+        <div class="side_bar">
+          <ul>
+            <li>
+              <img src="../../img/sidebar_icon1.svg" />
+              <p>캘린더</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon2.svg" />
+              <p>채팅</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon3.svg" />
+              <p>정산/매출</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon4.svg" />
+              <p>가입 승인</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon5.svg" />
+              <p>공지사항</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon6.svg" />
+              <p>계정/비번</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon7.svg" />
+              <p>권한</p>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+
+          <div id="authority_box"> 
+            <ul>
+              <li id="authority_tab_choice1" class="tab_choice">
+                <p>관리자 등록 / 관리</p>
+              </li>
+              <li id="authority_tab_choice2">
+                <p>작가등록 / 관리</p>
+              </li>
+              <li id="authority_tab_choice3">
+                <p>조직도</p>
+              </li>
+            </ul>
+
+
+            <!-- 관리자 등록 -->
+            <div id="authority_contents_box">
+              <div class="authority_contents_bg">
+                <img src="../../img/authority_bg.svg">
+              </div>
+
+              <div class="authority_footer_popup" id="authority_footer_popup_edit">
+                <img src="../../img/save_check.svg">
+                <p>[샹크스] 매니저 등록이 완료 되었습니다.</p>
+              </div>
+              <div class="authority_footer_popup" id="authority_footer_popup_delete">
+                <img src="../../img/save_check.svg">
+                <p>[샹크스] 매니저 삭제가 완료 되었습니다.</p>
+              </div>
+
+              <div id="authority_contents_mainbox">
+                <div>
+                  <div id="authority_find_input">
+                      <form>
+                        <div>
+                          <input type="text" placeholder="이름 / 필명 / 이메일로 사용자를 검색해 주세요." />
+                          <button>
+                            <img src="../../img/authority_search.svg" />
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+    
+                    <div id="authority_input_items">
+                        <div class="authority_input_item">
+                          <div>
+                            <img src="../../img/test_img.jpeg" />
+                          </div>
+                          <div>
+                            <h1>안수영</h1>
+                            <div>
+                              <div>
+                                <p>이름 : </p>
+                                <p>작가이름</p>
+                                <p>/</p>
+                              </div>
+                              <div>
+                                <p>필명 : </p>
+                                <p>소울풍</p>
+                                <p>/</p>
+                              </div>
+                              <div>
+                                <p>생년월일 : </p>
+                                <p>2019년 07월 08일</p>
+                                <p>/</p>
+                              </div>
+                              <div>
+                                <p>핸드폰 : </p>
+                                <p>010-6844-3322</p>
+                                <p>/</p>
+                              </div>
+                              <div>
+                                <p>메일주소 : </p>
+                                <p>dkdosls@naver.com</p>
+                              </div>
+                            </div>
+                            <div class="authority_input_item_checkbox">
+                              <div>
+                                <p>정산 관리</p>
+                                <input id="authority_checkbox1" type="checkbox" />
+                                <label for="authority_checkbox1">
+                                  <img src="../../img/share_check.svg"/>
+                                </label>
+                              </div>
+                              <div>
+                                <p>매출 관리</p>
+                                <input id="authority_checkbox2" type="checkbox" />
+                                <label for="authority_checkbox2">
+                                  <img src="../../img/share_check.svg"/>
+                                </label>
+                              </div>
+                              <div>
+                                <p>가입 승인</p>
+                                <input id="authority_checkbox3" type="checkbox" />
+                                <label for="authority_checkbox3">
+                                  <img src="../../img/share_check.svg"/>
+                                </label>
+                              </div>
+                              <div>
+                                <p>공지사항</p>
+                                <input id="authority_checkbox4" type="checkbox" />
+                                <label for="authority_checkbox4">
+                                  <img src="../../img/share_check.svg"/>
+                                </label>
+                              </div>
+                              <div>
+                                <p>권한 관리</p>
+                                <input id="authority_checkbox5" type="checkbox" />
+                                <label for="authority_checkbox5">
+                                  <img src="../../img/share_check.svg"/>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="authority_admin_add_btn">+ 관리자 등록</button>
+                        </div>
+                    </div>
+    
+                    <div id="authority_normal_items">
+                      <div id="authority_normal_header">
+                        <p>관리자 목록</p>
+                      </div>
+                      <div class="authority_normal_item backcolor">
+                        <div>
+                          <img src="../../img/test_img.jpeg" />
+                        </div>
+                        <div>
+                          <div>
+                            <h1>안수영</h1>
+                            <h1>:</h1>
+                            <h1>정산 관리</h1>
+                            <h1>/</h1>
+                            <h1>매출 관리</h1>
+                            <h1>/</h1>
+                            <h1>가입 승인</h1>
+                          </div>
+                          <div>
+                            <div>
+                              <p>이름 : </p>
+                              <p>작가이름</p>
+                              <p>/</p>
+                            </div>
+                            <div>
+                              <p>필명 : </p>
+                              <p>소울풍</p>
+                              <p>/</p>
+                            </div>
+                            <div>
+                              <p>생년월일 : </p>
+                              <p>2019년 07월 08일</p>
+                              <p>/</p>
+                            </div>
+                            <div>
+                              <p>핸드폰 : </p>
+                              <p>010-6844-3322</p>
+                              <p>/</p>
+                            </div>
+                            <div>
+                              <p>메일주소 : </p>
+                              <p>dkdosls@naver.com</p>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="authority_edit_btn">편집</button>
+                        <button class="authority_delete">삭제</button>
+                        <div class="authority_edit">
+                          <div>
+                            <p>권한 편집</p>
+                            <img class="authority_edit_close" src="../../img/exit_btn.svg"/>
+                          </div>
+                          <div>
+                            <div>
+                              <img src="../../img/test_img.jpeg" />
+                            </div>
+                            <div>
+                              <h1>샹크스</h1>
+                              <div>
+                                <p>이름 : </p>
+                                <p>샹크스</p>
+                                <p>/</p>
+                                <p>필명 : </p>
+                                <p>샹크스</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="authority_normal_items_checkbox">
+                            <div>
+                              <p>정산 관리</p>
+                              <input id="authority_add_checkbox1" type="checkbox" />
+                              <label for="authority_add_checkbox1">
+                                <img src="../../img/share_check.svg"/>
+                              </label>
+                            </div>
+                            <div>
+                              <p>매출 관리</p>
+                              <input id="authority_add_checkbox2" type="checkbox" />
+                              <label for="authority_add_checkbox2">
+                                <img src="../../img/share_check.svg"/>
+                              </label>
+                            </div>
+                            <div>
+                              <p>가입 승인</p>
+                              <input id="authority_add_checkbox3" type="checkbox" />
+                              <label for="authority_add_checkbox3">
+                                <img src="../../img/share_check.svg"/>
+                              </label>
+                            </div>
+                            <div>
+                              <p>공지사항</p>
+                              <input id="authority_add_checkbox4" type="checkbox" />
+                              <label for="authority_add_checkbox4">
+                                <img src="../../img/share_check.svg"/>
+                              </label>
+                            </div>
+                            <div>
+                              <p>권한 관리</p>
+                              <input id="authority_add_checkbox5" type="checkbox" />
+                              <label for="authority_add_checkbox5">
+                                <img src="../../img/share_check.svg"/>
+                              </label>
+                            </div>
+                          </div>
+                          <button>저장 / 메일발송</button>
+                        </div>
+                      </div>
+                      <div class="authority_normal_item">
+                        <div>
+                          <img src="../../img/test_img.jpeg" />
+                        </div>
+                        <div>
+                          <div>
+                            <h1>안수영</h1>
+                            <h1>:</h1>
+                            <h1>정산 관리</h1>
+                            <h1>/</h1>
+                            <h1>매출 관리</h1>
+                            <h1>/</h1>
+                            <h1>가입 승인</h1>
+                          </div>
+                          <div>
+                            <div>
+                              <p>이름 : </p>
+                              <p>작가이름</p>
+                              <p>/</p>
+                            </div>
+                            <div>
+                              <p>필명 : </p>
+                              <p>소울풍</p>
+                              <p>/</p>
+                            </div>
+                            <div>
+                              <p>생년월일 : </p>
+                              <p>2019년 07월 08일</p>
+                              <p>/</p>
+                            </div>
+                            <div>
+                              <p>핸드폰 : </p>
+                              <p>010-6844-3322</p>
+                              <p>/</p>
+                            </div>
+                            <div>
+                              <p>메일주소 : </p>
+                              <p>dkdosls@naver.com</p>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="authority_edit_btn">편집</button>
+                        <button class="authority_delete">삭제</button>
+                        <div class="authority_edit">
+                          <div>
+                            <p>권한 편집</p>
+                            <img class="authority_edit_close" src="../../img/exit_btn.svg"/>
+                          </div>
+                          <div>
+                            <div>
+                              <img src="../../img/test_img.jpeg" />
+                            </div>
+                            <div>
+                              <h1>샹크스</h1>
+                              <div>
+                                <p>이름 : </p>
+                                <p>샹크스</p>
+                                <p>/</p>
+                                <p>필명 : </p>
+                                <p>샹크스</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="authority_normal_items_checkbox">
+                            <div>
+                              <p>정산 관리</p>
+                              <input id="authority_add_checkbox1" type="checkbox" />
+                              <label for="authority_add_checkbox1">
+                                <img src="../../img/share_check.svg"/>
+                              </label>
+                            </div>
+                            <div>
+                              <p>매출 관리</p>
+                              <input id="authority_add_checkbox2" type="checkbox" />
+                              <label for="authority_add_checkbox2">
+                                <img src="../../img/share_check.svg"/>
+                              </label>
+                            </div>
+                            <div>
+                              <p>가입 승인</p>
+                              <input id="authority_add_checkbox3" type="checkbox" />
+                              <label for="authority_add_checkbox3">
+                                <img src="../../img/share_check.svg"/>
+                              </label>
+                            </div>
+                            <div>
+                              <p>공지사항</p>
+                              <input id="authority_add_checkbox4" type="checkbox" />
+                              <label for="authority_add_checkbox4">
+                                <img src="../../img/share_check.svg"/>
+                              </label>
+                            </div>
+                            <div>
+                              <p>권한 관리</p>
+                              <input id="authority_add_checkbox5" type="checkbox" />
+                              <label for="authority_add_checkbox5">
+                                <img src="../../img/share_check.svg"/>
+                              </label>
+                            </div>
+                          </div>
+                          <button>저장 / 메일발송</button>
+                        </div>
+                      </div>
+                      <div class="authority_normal_item">
+                        <div>
+                          <img src="../../img/test_img.jpeg" />
+                        </div>
+                        <div>
+                          <div>
+                            <h1>안수영</h1>
+                            <h1>:</h1>
+                            <h1>정산 관리</h1>
+                            <h1>/</h1>
+                            <h1>매출 관리</h1>
+                            <h1>/</h1>
+                            <h1>가입 승인</h1>
+                          </div>
+                          <div>
+                            <div>
+                              <p>이름 : </p>
+                              <p>작가이름</p>
+                              <p>/</p>
+                            </div>
+                            <div>
+                              <p>필명 : </p>
+                              <p>소울풍</p>
+                              <p>/</p>
+                            </div>
+                            <div>
+                              <p>생년월일 : </p>
+                              <p>2019년 07월 08일</p>
+                              <p>/</p>
+                            </div>
+                            <div>
+                              <p>핸드폰 : </p>
+                              <p>010-6844-3322</p>
+                              <p>/</p>
+                            </div>
+                            <div>
+                              <p>메일주소 : </p>
+                              <p>dkdosls@naver.com</p>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="authority_edit_btn">편집</button>
+                        <button class="authority_delete">삭제</button>
+                        <div class="authority_edit">
+                          <div>
+                            <p>권한 편집</p>
+                            <img class="authority_edit_close" src="../../img/exit_btn.svg"/>
+                          </div>
+                          <div>
+                            <div>
+                              <img src="../../img/test_img.jpeg" />
+                            </div>
+                            <div>
+                              <h1>샹크스</h1>
+                              <div>
+                                <p>이름 : </p>
+                                <p>샹크스</p>
+                                <p>/</p>
+                                <p>필명 : </p>
+                                <p>샹크스</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="authority_normal_items_checkbox">
+                            <div>
+                              <p>정산 관리</p>
+                              <input id="authority_add_checkbox1" type="checkbox" />
+                              <label for="authority_add_checkbox1">
+                                <img src="../../img/share_check.svg"/>
+                              </label>
+                            </div>
+                            <div>
+                              <p>매출 관리</p>
+                              <input id="authority_add_checkbox2" type="checkbox" />
+                              <label for="authority_add_checkbox2">
+                                <img src="../../img/share_check.svg"/>
+                              </label>
+                            </div>
+                            <div>
+                              <p>가입 승인</p>
+                              <input id="authority_add_checkbox3" type="checkbox" />
+                              <label for="authority_add_checkbox3">
+                                <img src="../../img/share_check.svg"/>
+                              </label>
+                            </div>
+                            <div>
+                              <p>공지사항</p>
+                              <input id="authority_add_checkbox4" type="checkbox" />
+                              <label for="authority_add_checkbox4">
+                                <img src="../../img/share_check.svg"/>
+                              </label>
+                            </div>
+                            <div>
+                              <p>권한 관리</p>
+                              <input id="authority_add_checkbox5" type="checkbox" />
+                              <label for="authority_add_checkbox5">
+                                <img src="../../img/share_check.svg"/>
+                              </label>
+                            </div>
+                          </div>
+                          <button>저장 / 메일발송</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- 작가 등록 -->
+            <div id="author_contents_box">
+              <div class="authority_contents_bg">
+                <img src="../../img/authority_bg.svg">
+              </div>
+              <div id="author_contents_main_box">
+
+                  <div id="author_notadd_items">
+                      <div id="author_notadd_header">
+                        <p>미등록</p>
+                      </div>
+                      <div class="author_notadd_item">
+                        <div>
+                          <img src="../../img/test_img.jpeg" />
+                        </div>
+                        <div>
+                          <div>
+                            <h1>안수영</h1>
+                          </div>
+                          <div>
+                            <div>
+                              <p>이름 : </p>
+                              <p>작가이름</p>
+                              <p>/</p>
+                            </div>
+                            <div>
+                              <p>필명 : </p>
+                              <p>소울풍</p>
+                              <p>/</p>
+                            </div>
+                            <div>
+                              <p>생년월일 : </p>
+                              <p>2019년 07월 08일</p>
+                              <p>/</p>
+                            </div>
+                            <div>
+                              <p>핸드폰 : </p>
+                              <p>010-6844-3322</p>
+                              <p>/</p>
+                            </div>
+                            <div>
+                              <p>메일주소 : </p>
+                              <p>dkdosls@naver.com</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="author_notadd_select">
+                          <div>
+                            <p>관리자 지정</p>
+                            <img src="../../img/select_btn.svg"/>
+                          </div>
+                          <div class="author_notadd_select_menu">
+                            <div>정현진</div>
+                            <div>안수정</div>
+                            <div>김도민</div>
+                            <div>유승주</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="author_notadd_item">
+                        <div>
+                          <img src="../../img/test_img.jpeg" />
+                        </div>
+                        <div>
+                          <div>
+                            <h1>안수영</h1>
+                          </div>
+                          <div>
+                            <div>
+                              <p>이름 : </p>
+                              <p>작가이름</p>
+                              <p>/</p>
+                            </div>
+                            <div>
+                              <p>필명 : </p>
+                              <p>소울풍</p>
+                              <p>/</p>
+                            </div>
+                            <div>
+                              <p>생년월일 : </p>
+                              <p>2019년 07월 08일</p>
+                              <p>/</p>
+                            </div>
+                            <div>
+                              <p>핸드폰 : </p>
+                              <p>010-6844-3322</p>
+                              <p>/</p>
+                            </div>
+                            <div>
+                              <p>메일주소 : </p>
+                              <p>dkdosls@naver.com</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="author_notadd_select">
+                          <div>
+                            <p>관리자 지정</p>
+                            <img src="../../img/select_btn.svg"/>
+                          </div>
+                          <div class="author_notadd_select_menu">
+                            <div>정현진</div>
+                            <div>안수정</div>
+                            <div>김도민</div>
+                            <div>유승주</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="author_add_items">
+                        <div id="author_add_header">
+                          <p>등록 완료</p>
+                        </div>
+                        <div class="author_add_item">
+                          <div>
+                            <img src="../../img/test_img.jpeg" />
+                          </div>
+                          <div>
+                            <div>
+                              <h1>안수영</h1>
+                            </div>
+                            <div>
+                              <div>
+                                <p>이름 : </p>
+                                <p>작가이름</p>
+                                <p>/</p>
+                              </div>
+                              <div>
+                                <p>필명 : </p>
+                                <p>소울풍</p>
+                                <p>/</p>
+                              </div>
+                              <div>
+                                <p>생년월일 : </p>
+                                <p>2019년 07월 08일</p>
+                                <p>/</p>
+                              </div>
+                              <div>
+                                <p>핸드폰 : </p>
+                                <p>010-6844-3322</p>
+                                <p>/</p>
+                              </div>
+                              <div>
+                                <p>메일주소 : </p>
+                                <p>dkdosls@naver.com</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="author_add_select">
+                            <div>
+                              <p>정현진</p>
+                              <img src="../../img/select_btn.svg"/>
+                            </div>
+                            <div class="author_add_select_menu">
+                              <div>정현진</div>
+                              <div>안수정</div>
+                              <div>김도민</div>
+                              <div>유승주</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                  </div>
+              </div>
+
+
+
+              <!-- 조직도 -->
+              <div id="chart_contents_box">
+                <div class="authority_contents_bg">
+                  <img src="../../img/authority_bg.svg">
+                </div>
+
+                <div id="group_contents_mainbox">
+  
+                  <div class="group_item">
+                    <div class="group_item_part1">
+                      <div>
+                        <img src="../../img/test_img.jpeg" />
+                      </div>
+                      <div>
+                        <div>
+                          <h1>안수영</h1>
+                          <h1>:</h1>
+                          <h1>정산 관리</h1>
+                          <h1>/</h1>
+                          <h1>매출 관리</h1>
+                          <h1>/</h1>
+                          <h1>가입 승인</h1>
+                        </div>
+                        <div>
+                          <div>
+                            <p>이름 : </p>
+                            <p>작가이름</p>
+                            <p>/</p>
+                          </div>
+                          <div>
+                            <p>필명 : </p>
+                            <p>소울풍</p>
+                            <p>/</p>
+                          </div>
+                          <div>
+                            <p>생년월일 : </p>
+                            <p>2019년 07월 08일</p>
+                            <p>/</p>
+                          </div>
+                          <div>
+                            <p>핸드폰 : </p>
+                            <p>010-6844-3322</p>
+                            <p>/</p>
+                          </div>
+                          <div>
+                            <p>메일주소 : </p>
+                            <p>dkdosls@naver.com</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="group_item_text">강중사(작가 이름), 달까기(작가 이름), 라이온(작가 이름), 마실물(작가 이름), 반클러치(작가 이름), 삼편잡가(작가 이름), 알랜더(작가 이름), 초콜릿라면(작가 이름), 한산이가(작가 이름),13월생(작가 이름)</p>
+                    <div class="group_item_icon">
+                      <img src="../../img/more_btn_img.svg">
+                    </div>
+                  </div>
+                  <div class="group_item">
+                    <div class="group_item_part1">
+                      <div>
+                        <img src="../../img/test_img.jpeg" />
+                      </div>
+                      <div>
+                        <div>
+                          <h1>안수영</h1>
+                          <h1>:</h1>
+                          <h1>정산 관리</h1>
+                          <h1>/</h1>
+                          <h1>매출 관리</h1>
+                          <h1>/</h1>
+                          <h1>가입 승인</h1>
+                        </div>
+                        <div>
+                          <div>
+                            <p>이름 : </p>
+                            <p>작가이름</p>
+                            <p>/</p>
+                          </div>
+                          <div>
+                            <p>필명 : </p>
+                            <p>소울풍</p>
+                            <p>/</p>
+                          </div>
+                          <div>
+                            <p>생년월일 : </p>
+                            <p>2019년 07월 08일</p>
+                            <p>/</p>
+                          </div>
+                          <div>
+                            <p>핸드폰 : </p>
+                            <p>010-6844-3322</p>
+                            <p>/</p>
+                          </div>
+                          <div>
+                            <p>메일주소 : </p>
+                            <p>dkdosls@naver.com</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p>강중사(작가 이름), 달까기(작가 이름), 라이온(작가 이름), 마실물(작가 이름), 반클러치(작가 이름), 삼편잡가(작가 이름), 알랜더(작가 이름), 초콜릿라면(작가 이름), 한산이가(작가 이름),13월생(작가 이름)</p>
+                    <div class="group_item_icon">
+                      <img src="../../img/more_btn_img.svg">
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+
+            </div>
+          </div>
+   
+        </div>
+        <div class="template_footer">
+          <div>
+            <img src="../../img/header_logo.svg"/>
+            <div>
+              <ul>
+                <li>(주)작가컴퍼니</li>
+                <li>대표자 : 최조은</li>
+                <li>개인정보보호책임자 : 최조은</li>
+                <li>사업자등록번호 : 440-81-00793</li>
+              </ul>
+              <ul>
+                <li>서울특별시 마포구 양화로6길 57-10, 3층(서교동)</li>
+                <li>moon@jakgacompany.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

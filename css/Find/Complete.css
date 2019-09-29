@@ -1,0 +1,27 @@
+#complete_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+#complete_box > img {
+  width: 200px;
+  height: 199px;
+  object-fit: contain;
+
+}
+
+#complete_box > h1 {
+  margin-top: 50px;
+  font-size: 30px;
+  color: #000000;
+  font-weight: 400;
+}
+
+#complete_box > p {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #979797;
+}

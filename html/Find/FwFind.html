@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@1.0/nanumbarungothicsubset.css">
+  <link rel="stylesheet" href="../../css/GlobalStyle.css">
+  <link rel="stylesheet" href="../../css/Find/FwFind.css">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div id="fwfind_box">
+      <h1>- 비밀번호 찾기 -</h1>
+      <form>
+        <div>
+          <input id="fwfind_id" name="fwfind_id" type="text" placeholder="아이디"/>
+          <p>아이디를 입력하세요.</p>
+        </div>
+        <div>
+          <input id="fwfind_email" name="fwfind_email" type="email" placeholder="이메일"/>
+          <p>가입시 기재한 이메일 주소를 입력하세요.</p>
+          <div id="idfind_date_error">
+            <img src="../../img/error_icon.svg" />
+            <p>이메일 주소를 다시 한번 확인해 주세요.</p>
+          </div>
+        </div>
+        <a>
+          <button id="fwfind_submit" type="submit" disabled>다음</button>
+        </a>
+      </form>
+    </div>
+    <div id="fwfind_popup_bg"></div>
+    <div id="fwfind_popup_01" class="fwfind_popup">
+      <div>
+        <h1>인증메일 발송</h1>
+        <p>확인 버튼을 클릭하면 입력한 이메일 주소로 인증메일이 발송됩니다. 인증 후 비밀번호를 재설정 하세요.</p>
+        <div>
+          <a href="./MailSend.html">
+            <button id="fwfind_popup_01_ok">확인</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="fwfind_popup_02" class="fwfind_popup">
+      <div>
+        <h1>정보확인 불가</h1>
+        <p>입력한 정보가 일치하지 않습니다. 정보를 확인 후 다시 시도하세요.</p>
+        <div>
+          <a>
+            <button id="fwfind_popup_02_ok">확인</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/Find/FwFind.js"></script>
+</body>
+</html>

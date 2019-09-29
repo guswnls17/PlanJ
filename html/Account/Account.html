@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@1.0/nanumbarungothicsubset.css">
+  <link rel="stylesheet" href="../../css/GlobalStyle.css">
+  <link rel="stylesheet" href="../../css/Account/Account.css">
+  <script src="../../js/Account/Account.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="template">
+      <div class="header">
+        <img src="../../img/header_logo.svg"/>
+        <div>
+          <p id="profile_name">북미혼</p>
+          <a>
+            <img src="../../img/logout.svg">
+          </a>
+        </div>
+      </div>
+      <div class="template_body">
+        <div class="side_bar">
+          <ul>
+            <li>
+              <img src="../../img/sidebar_icon1.svg" />
+              <p>캘린더</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon2.svg" />
+              <p>채팅</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon3.svg" />
+              <p>정산/매출</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon4.svg" />
+              <p>가입 승인</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon5.svg" />
+              <p>공지사항</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon6.svg" />
+              <p>계정/비번</p>
+            </li>
+            <li>
+              <img src="../../img/sidebar_icon7.svg" />
+              <p>권한</p>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+
+          
+          <div id="account_box"> 
+            <ul>
+              <li id="account_tab_choice1" class="tab_choice">
+                <p>계정정보 관리</p>
+              </li>
+              <li id="account_tab_choice2">
+                <p>비밀번호 관리</p>
+              </li>
+            </ul>
+
+            <!-- 계정관리 -->
+            <div id="account_contents_box">
+
+              <div class="account_add_true">
+                <img src="../../img/save_check.svg">
+                <p>계정정보 변경이 완료 되었습니다.</p>
+              </div>
+
+              <form>
+                <div id="account_id">
+                  <p>아이디 :</p>
+                  <input type="text"/>
+                  <div>
+                    <img src="../../img/error_icon.svg"/>
+                    <p>이미 사용중인 아이디입니다.</p>
+                  </div>
+                </div>
+                <div id="account_name">
+                  <p>필명 :</p>
+                  <input type="text"/>
+                  <div>
+                    <img src="../../img/error_icon.svg"/>
+                    <p>이미 사용중인 필명입니다.</p>
+                  </div>
+                </div>
+                <div id="account_email">
+                  <p>이메일 :</p>
+                  <input type="email"/>
+                  <div>
+                    <img src="../../img/error_icon.svg"/>
+                    <p>현재 등록된 이메일 정보와 동일합니다.</p>
+                  </div>
+                </div>
+                <div id="account_phone">
+                  <p>핸드폰 :</p>
+                  <input type="number"/>
+                  <div>
+                    <img src="../../img/error_icon.svg"/>
+                    <p>안전한 정보 변경을 위해 인증을 해주세요.</p>
+                  </div>
+                  <div id="account_phone_btn">
+                    <h1>인증</h1>
+                  </div>
+                </div>
+                <div id="account_phone_confirm">                
+                  <input type="number"/>
+                </div>
+                <button>계정정보 변경</button>
+              </form>
+            </div>
+
+            <!-- 비밀번호관리 -->
+            <div id="password_contents_box">
+
+              <div class="account_add_true">
+                <img src="../../img/save_check.svg">
+                <p>비밀번호 변경이 완료 되었습니다.</p>
+              </div>
+
+              <form>
+                <div id="now_passowrd">
+                  <p>현재 비밀번호 :</p>
+                  <input type="password"/>
+                  <div>
+                    <img src="../../img/error_icon.svg"/>
+                    <p>정확한 비밀번호 입력을 확인해 주세요.</p>
+                  </div>
+                </div>
+                <div id="new_password">
+                  <p>새 비밀번호 :</p>
+                  <input type="password"/>
+                  <div>
+                    <img src="../../img/error_icon.svg"/>
+                    <p>비밀번호 입력을 다시한번 확인해 주세요.</p>
+                  </div>
+                </div>
+                <div id="new_passowrd_confirm">
+                  <p>새 비밀번호 확인 :</p>
+                  <input type="password"/>
+                  <div>
+                    <img src="../../img/error_icon.svg"/>
+                    <p>비밀번호 입력을 다시한번 확인해 주세요.</p>
+                  </div>
+                </div>
+                <button>비밀번호 변경</button>
+              </form>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="template_footer">
+        <div>
+          <img src="../../img/header_logo.svg"/>
+          <div>
+            <ul>
+              <li>(주)작가컴퍼니</li>
+              <li>대표자 : 최조은</li>
+              <li>개인정보보호책임자 : 최조은</li>
+              <li>사업자등록번호 : 440-81-00793</li>
+            </ul>
+            <ul>
+              <li>서울특별시 마포구 양화로6길 57-10, 3층(서교동)</li>
+              <li>moon@jakgacompany.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
