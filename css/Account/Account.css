@@ -71,19 +71,29 @@
 
 #account_contents_box > form {
   display: flex;
+  flex-direction: row;
+}
+
+#account_contents_box > form > div{
+  display: flex;
   flex-direction: column;
 }
 
-#account_contents_box > form > div {
+#account_contents_box > form > div:nth-child(2) {
+  display: flex;
+  margin-left: 60px;
+  height: 270px;
+}
+
+#account_contents_box > form > div > div {
   position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
-  flex-wrap: wrap;  
-  padding-bottom: 34px;
+  padding-bottom: 28px;
 }
 
-#account_contents_box > form > div > div:nth-child(3) {
+#account_contents_box > form > div > div > div:nth-child(3) {
   position: absolute;
   top: 40px;
   left: 80px;
@@ -93,19 +103,19 @@
   align-items: center;
 }
 
-#account_contents_box > form > div > div > p {
+#account_contents_box > form > div > div > div > p {
   font-size: 10px;
   margin-left: 5px;
   color: #eb605c
 }
 
-#account_contents_box > form > div > p {
+#account_contents_box > form > div > div > p {
   font-size: 12px;
   width: 40px;
 }
 
-#account_contents_box > form > div > input {
-  margin-left: 25px;
+#account_contents_box > form > div > div > input {
+  margin-left: 10px;
   width: 264px;
   height: 34px;
   border-radius: 5px;
@@ -113,9 +123,9 @@
   padding: 0 10px;
 }
 
-#account_contents_box > form > button {
+#account_contents_box > form > div > button {
   margin-left: 194px;
-  margin-top: 30px;
+  margin-top: auto;
   width: 134px;
   height: 26px;
   border-radius: 5px;
@@ -145,11 +155,50 @@
   cursor: pointer;
 }
 
-#account_contents_box > form > div:nth-child(5) {
-  display: none;
+#account_phone_btn:hover {
+  background-color: #32346e;
+}
+
+#account_contents_box > form > div > div:nth-child(5) {
   margin-left: 40px;
   padding: 0;
 }
+
+#account_adressCode {
+  padding-bottom: 10px !important;
+}
+
+#account_userAdress {
+  margin-left: 40px;
+  padding-bottom: 10px !important;
+}
+#account_detailAdress {
+  margin-left: 40px;
+}
+
+#adress_button {
+  position: initial !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  margin-left: 10px;
+  width: 48px !important;
+  height: 22px;
+  border-radius: 5px;
+  box-shadow: 0 0.5px 0.5px rgba(0, 0, 0, 0.25);
+  border: solid 1px #ddd;
+  background-color: #ffffff;
+  cursor: pointer;
+  color: black;
+  font-weight: 300;
+}
+
+#adress_button:hover {
+  background-color: #32346e;
+  color: white;
+}
+
 
 /* 계정수정 완료 */
 .account_add_true {

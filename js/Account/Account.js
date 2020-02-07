@@ -18,15 +18,6 @@ $(function(){
     $('#account_tab_choice2 > p').css("color", "black");
   });
 
-  $('#account_phone_btn').click(function() {
-    $('#account_phone_btn').css("color", "white");
-    $('#account_phone_btn').css("background-color", "#32346e");
-    $('#account_contents_box > form > div:nth-child(5)').css("display", "block");
-    $('#account_phone > div:nth-child(3)').css("display", "none");
-    $('#account_phone_btn > h1').css("color", "white");
-  });
-
-
   const InputBoolean = () => {
     const userId = $("#account_id > input").val();
     const nickName = $("#account_name > input").val();
