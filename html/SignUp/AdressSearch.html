@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@1.0/nanumbarungothicsubset.css">
+  <link rel="stylesheet" href="../../css/GlobalStyle.css">
+  <link rel="stylesheet" href="../../css/SignUp/AddressSearch.css">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div id="header">
+      <h2>우편번호찾기</h2>
+      <a onclick="history.back()">
+        <img src="../../img/close_x.svg"/>
+      </a>
+    </div>
+    <div id="addressSearch_box">
+      <div id="searchMethod">
+        <button>지번주소</button>
+        <button>도로명주소</button>
+      </div>
+      <p id="adressInfo" class="adressInfoGibun">찾으시려는 <span>동(읍/면/리)과 번지수 or 건물명</span>을 정확하게 입력해 주세요. 동(읍/면/리)만 입력<br/>하시는 경우 구우편번호(6자리)가 노출될 수 있습니다.(예:정자동 178-1, 대치2동 현대아파트)</p>
+      <p id="adressInfo" class="adressInfoRoad">찾으시려는 <span>도로명주소+건물번호/건물명</span>을 입력해주세요.<br/>도로명만 검색하시는 경우 정확한 검색결과가 나오지 않을 수 있습니다.(예:중앙동, 불정로432번길)</p>
+      <div id="searchBox">
+        <input placeholder="동(읍/리/면)의 이름을 입력해주세요.">
+        <img src="../../img/authority_search_black.svg"/>
+      </div>
+      <div id="searchContents">
+        <div id="itemHeader">
+          <p>“삼성동 16-2” </p>
+          <p>&nbsp;검색결과 입니다.</p>
+        </div>
+        <div id="gibunItemBody">
+          <div>
+            <p>서울특별시 강남구 삼성동 16-2 삼성동힐스테이트1단지아파트</p>
+            <span>06090 (135-090)</span>
+          </div>
+          <div>
+            <p>서울특별시 강남구 삼성동 16-2 삼성동힐스테이트1단지아파트</p>
+            <span>06090 (135-090)</span>
+          </div>
+        </div>
+        <div id="roadItemBody">
+          <div>
+            <div>
+              <div>
+                <p>도로명</p>
+                <p>서울특별시 강남구 학동로 68길 29(삼성동, 삼성동 힐스테이트1단지아파트)</p>
+              </div>
+              <div>
+                <p>지번</p>
+                <p>서울특별시 강남구 삼성동 16-2 삼성동 힐스테이트1단지아파트</p>
+              </div>
+              
+            </div>
+            <div>
+              <p>06090 (135-090)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="itemInfo">
+        <p>*기본주소 선택 후 상세주소를 입력해주세요. 상세주소가 없는 경우 주소지 특징을 입력해주세요.</p>
+        <p>*2016년 8월 1일부터는 5자리 우편번호 사용이 의무화 됩니다.</p>
+      </div>
+      <div id="itemFooter">
+        <div id="basicItem">
+          <p>주소입력</p>
+          <p>(06090)서울특별시 강남구 삼성동 16-2 삼성동힐스테이1단지아파트</p>
+        </div>
+        <div id="detailItem">
+          <p>상세주소</p>
+          <input type="text" />
+        </div>
+      </div>
+      <div id="adressButton">
+        <button type="button" onclick="history.back()">
+          주소입력
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/SignUp/AdressSearch.js"></script>
+</body>
+</html>

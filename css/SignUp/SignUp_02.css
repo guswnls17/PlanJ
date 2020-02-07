@@ -1,10 +1,18 @@
 #signup02_box {
   display: flex;
-  justify-content: center;
+  padding-top: 100px;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   padding-bottom: 50px;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
 }
+
+#signup02_box::-webkit-scrollbar {width: 4px; height: 8px; border: 3px solid #fff; }
+#signup02_box::-webkit-scrollbar-track {background: #efefef; }
+#signup02_box::-webkit-scrollbar-thumb {height: 50px; width: 50px; background: #32346e }
 
 #signup02_box > h1 {
   font-size: 30px;
@@ -88,6 +96,11 @@
   margin-left: 5px;
   font-size: 10px;
   color: #eb605c;
+}
+
+#certification_button:hover {
+  background-color: #32346e;
+  color: white;
 }
 
 input[type="number"]::-webkit-outer-spin-button,

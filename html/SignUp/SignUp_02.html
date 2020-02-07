@@ -46,10 +46,31 @@
             <img src="../../img/error_icon.svg" />
             <p>안전한 회원가입을 위해 인증을 해주세요.</p>
           </div>
-          <button id="certification_button">인증</button>
+          <button id="certification_button" type="button">인증</button>
         </div>
         <div>
           <input id="signup02_certification" name="certification" type="number" placeholder="인증번호"/>
+        </div>
+        <div>
+          <input id="signup02_adressCode" name="adressCode" type="text" placeholder=""/>
+          <p>배송이 가능한 자택/작업실 주소를 검색하여 입력하세요..</p>
+          <div id="PWConfirm_error">
+            <img src="../../img/error_icon.svg" />
+            <p>원활한 서비스를 위해 주소를 입력해주세요.</p>
+          </div>
+          <button 
+            id="certification_button"
+            type="button"
+            onclick="window.location.href='./AdressSearch.html'"
+          >
+            주소검색
+          </button>
+        </div>
+        <div>
+          <input id="signup02_userAdress" name="userAdress" type="number" placeholder=""/>
+        </div>
+        <div>
+          <input id="signup02_detailAdress" name="detailAdress" type="number" placeholder=""/>
         </div>
         <a>
           <button id="signup02_submit" type="submit" disabled>다음</button>
