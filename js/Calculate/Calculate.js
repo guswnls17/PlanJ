@@ -146,4 +146,33 @@ $(function(){
   $(".side_bar > ul > li:nth-child(7)").click(function(e) {
     location.replace('../../html/Authority/Authority.html');
   });
+
+  // 선지급 데이터 팝업 컨트롤
+  $("#calculate_list_input > button").click(function(){
+    $("#popup_bg").css("display", "flex");
+    $("#payment_popup").css("display", "flex");
+  });
+  $("#payment_popup_exit").click(function(){
+    $("#popup_bg").css("display", "none");
+    $("#payment_popup").css("display", "none");
+  });
+  $("#payment_popup_ok").click(function(){
+    $("#popup_bg").css("display", "none");
+    $("#payment_popup").css("display", "none");
+  });
+  $("#payment_popup_exit").hover(function(){
+    $("#payment_popup_exit").css("color", "black");
+    $("#payment_popup_exit").css("border-bottom", "1px solid black");
+    $("#payment_popup_ok").css("color", "#888888");
+    $("#payment_popup_ok").css("border", "none");
+  }, function(){
+    $("#payment_popup_exit").css("color", "#888888");
+    $("#payment_popup_exit").css("border", "none");
+    $("#payment_popup_ok").css("color", "black");
+  })  
+  $("#payment_popup_ok").hover(function(){
+    $("#payment_popup_ok").css("border-bottom", "1px solid black");
+  }, function(){
+    $("#payment_popup_ok").css("border", "none");
+  })
 })

@@ -145,6 +145,21 @@
                           <input id="calculate_file_name" disabled placeholder="정산 파일을 불러오세요"/>
                           <label for="calculate_file_input">불러오기</label>
                           <input id="calculate_file_input" type="file"/>
+                          <button>선지급 데이터 입력하기</button>
+                        </div>
+                        <div id="paymentContent">
+                          <div id="paymentContent_header" >
+                            <ul>
+                              <li>선지급 금액</li>
+                              <li>차감 금액</li>
+                            </ul>
+                          </div>
+                          <div id="paymentContent_body" >
+                            <ul>
+                              <li>￦10,000,000</li>
+                              <li>￦5,000,000</li>
+                            </ul>
+                          </div>
                         </div>
                         <div id="calculate_list_tabel">
                           <div id="calculate_list_header" >
@@ -404,6 +419,31 @@
               <li>moon@jakgacompany.com</li>
             </ul>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup_bg"></div>
+    <div id="payment_popup">
+      <div>
+        <h1>선지급 데이터 입력</h1>
+        <div>
+          <div>
+            <p>선지급 금액</p>
+            <input type="number" placeholder="원단위로 입력해 주세요."/>
+          </div>
+          <div>
+            <p>차감 금액</p>
+            <input type="number" placeholder="원단위로 입력해 주세요."/>
+          </div>
+        </div>
+        <div>
+          <a>
+            <button id="payment_popup_exit">취소</button>
+          </a>
+          <a>
+            <button id="payment_popup_ok">등록</button>
+          </a>
         </div>
       </div>
     </div>
