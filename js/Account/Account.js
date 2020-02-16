@@ -18,7 +18,7 @@ $(function(){
     $('#account_tab_choice2 > p').css("color", "black");
   });
 
-  const InputBoolean = () => {
+  function InputBoolean() {
     const userId = $("#account_id > input").val();
     const nickName = $("#account_name > input").val();
     const userPW = $("#account_email > input").val();
@@ -42,7 +42,7 @@ $(function(){
       }
   }
 
-  const PasswordInputBoolean = () => {
+  function PasswordInputBoolean() {
     const userId = $("#now_passowrd > input").val();
     const nickName = $("#new_password > input").val();
     const userPW = $("#new_passowrd_confirm > input").val();

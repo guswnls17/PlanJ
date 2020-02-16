@@ -1,7 +1,7 @@
 $(function(){
 
   //인풋 모두 입력 시 서브밋버튼 배경 변환
-  const InputBoolean = () => {
+  function InputBoolean() {
     const userId = $("#signup01_userid").val();
     const nickName = $("#signup01_nickname").val();
     const userPW = $("#signup01_userpw").val();

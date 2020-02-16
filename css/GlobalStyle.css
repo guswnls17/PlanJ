@@ -43,10 +43,11 @@ input:focus {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1680px;
+  /* max-width: 1680px; */
   min-width: 1024px;
   height: 100vh;
   min-height: 640px;
+  border: 1px solid #ddd;
 }
 
 .header {

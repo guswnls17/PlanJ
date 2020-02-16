@@ -9,7 +9,7 @@ $(function(){
   }
 
   //주소 검색 방식 선택 버튼 컨트롤
-  $("#searchMethod").children("button").first().click(() => {
+  $("#searchMethod").children("button").first().click(function() {
     $("#searchMethod").children("button").first().css("background-color", "#32346e")
     $("#searchMethod").children("button").first().css("color", "white")
     $("#searchMethod").children("button").last().css("background-color", "#ffffff")
@@ -19,7 +19,7 @@ $(function(){
     $("#gibunItemBody").css("display", "block")
     $("#roadItemBody").css("display", "none")
   })
-  $("#searchMethod").children("button").last().click(() => {
+  $("#searchMethod").children("button").last().click(function() {
     $("#searchMethod").children("button").last().css("background-color", "#32346e")
     $("#searchMethod").children("button").last().css("color", "white")
     $("#searchMethod").children("button").first().css("background-color", "#ffffff")
@@ -31,7 +31,7 @@ $(function(){
   })
 
   //주소입력버튼 컨트롤
-  const Handler = () => {
+  function Handler() {
     let searchBox = $("#searchBox").children("input").val()
     let detailItem = $("#detailItem").children("input").val()
   
@@ -46,10 +46,10 @@ $(function(){
 
   const searchBoxChange = $("#searchBox").children("input")
   const detailItemChange = $("#detailItem").children("input")
-  searchBoxChange.change(()=> {
+  searchBoxChange.change(function() {
     Handler()
   })
-  detailItemChange.change(()=>{
+  detailItemChange.change(function() {
     Handler()
   })
 

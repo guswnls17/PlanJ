@@ -5,7 +5,7 @@ $(function(){
   };
 
   //인풋 모두 입력 시 서브밋버튼 배경 변환
-  const InputBoolean = () => {
+  function InputBoolean() {
     const changefw_fw = $("#changefw_fw").val();
     const changefw_confirm = $("#changefw_confirm").val();
 

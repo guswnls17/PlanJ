@@ -1,6 +1,6 @@
 $(function(){
 
-  const InputBoolean = () => {
+  function InputBoolean() {
     const userId = $("#id_box > input").val();
     const nickName = $("#pw_box > input").val();
 

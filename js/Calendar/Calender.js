@@ -1,27 +1,3 @@
-
-
-
-const showCoords = (event) => {
-
-  if (!e) {
-    var e = window.event;
-  }
-
-  if (e.target) {
-      targ=e.target;
-  } else if (e.srcElement) {
-      targ=e.srcElement;
-  }
-
-  var dayNumber = document.getElementsByClassName('fc-day-number')
-
-  for (var i=0;i<dayNumber.length; i++) {
-    dayNumber[i].classList.remove('clickday');
-  }
-
-  e.target.classList.add('clickday');
-}
-
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
 
@@ -43,9 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
       addEventButton: {
         text: '일정 추가',
         click: function() {
-          var popUpStart = () => {
+          function popUpStart () {
             var popUp = document.getElementById("add_popup")
             popUp.style.display = "flex";
+            return popUp
           }
           var dateStr = popUpStart();
           var date = new Date(dateStr + 'T00:00:00'); // will be in local time
@@ -150,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var dayNumber = document.getElementsByClassName('fc-day-number')
   
-  const DayRemove = () => {
+  function DayRemove () {
     for (var i=0;i<dayNumber.length; i++) {
       var aa = dayNumber[i].innerHTML.slice(0,-1)
       dayNumber[i].innerHTML = aa
@@ -174,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
 $(function(){
   var dayNumber = document.getElementsByClassName('fc-day-number')
   
-  const DayRemove = () => {
+  function DayRemove () {
     for (var i=0;i<dayNumber.length; i++) {
       var aa = dayNumber[i].innerHTML.slice(0,-1)
       dayNumber[i].innerHTML = aa
@@ -259,3 +236,23 @@ $(function(){
   });
 });
 
+function showCoords(event) {
+
+  if (!e) {
+    var e = window.event;
+  }
+
+  if (e.target) {
+      targ=e.target;
+  } else if (e.srcElement) {
+      targ=e.srcElement;
+  }
+
+  var dayNumber = document.getElementsByClassName('fc-day-number')
+
+  for (var i=0;i<dayNumber.length; i++) {
+    dayNumber[i].classList.remove('clickday');
+  }
+
+  e.target.classList.add('clickday');
+}
