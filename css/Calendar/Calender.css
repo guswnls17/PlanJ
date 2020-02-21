@@ -92,6 +92,10 @@
   cursor: pointer;
 }
 
+#profile_popup > div:nth-child(2) > div:nth-child(2) > label > img {
+  pointer-events: none;
+}
+
 #profile_popup > div:nth-child(2) > div:nth-child(2) > button {
   margin-top: 5px;
   width: 42px;
