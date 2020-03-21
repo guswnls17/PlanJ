@@ -105,6 +105,10 @@
               <div id="calculate_contents_box_template">
                 <!-- 유저리스트 -->
                 <div id="calculate_userlist">
+                  <!-- 데이터입력 -->
+                  <div id="data_upload_button">
+                    <button>데이터 입력</button>
+                  </div>
                   <div class="calculate_user_profile">
                     <div>
                       <img src="../../img/test_img.jpeg">
@@ -130,6 +134,28 @@
                     <img src="../../img/none_icon.svg">
                     <p>내용이 없습니다.</p>
                   </div>
+                  <!-- 데이터입력보드 -->
+                  <div id="data_upload_file">
+                      <div id="calculate_back">
+                        <img src="../../img/back_btn.svg">
+                        <p>뒤로가기</p>
+                      </div>
+                      <div id="calculate_file_none">
+                        <img src="../../img/none_icon.svg">
+                        <p>내용이 없습니다.</p>
+                      </div>
+                      <div id="calculate_list">
+                        <div>
+                          <div id="calculate_list_input">
+                            <input id="calculate_file_name" disabled placeholder="정산 파일을 불러오세요"/>
+                            <label for="calculate_file_input">불러오기</label>
+                            <input id="calculate_file_input" type="file"/>
+                            <button id="calculate_save_button">저장하기</button>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <!-- 유저정산보드 -->
                   <div id="calculate_file">
                     <div id="calculate_back">
                       <img src="../../img/back_btn.svg">
@@ -145,7 +171,7 @@
                           <input id="calculate_file_name" disabled placeholder="정산 파일을 불러오세요"/>
                           <label for="calculate_file_input">불러오기</label>
                           <input id="calculate_file_input" type="file"/>
-                          <button>선지급 데이터 입력하기</button>
+                          <button id="calculate_payment_button">선지급 데이터 입력하기</button>
                         </div>
                         <div id="paymentContent">
                           <div id="paymentContent_header" >

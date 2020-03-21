@@ -37,6 +37,7 @@ $(function(){
 
     //정산 저장 버튼 컨트롤
     $('#file_list_btn').click(function() {
+      $('.calculate_user_profile').removeClass('calculate_user_profile_backcolor');
       $('#calculate_saved').css("display", "none");
       $('#file_list_btn').css("display", "none");
       $('#calculate_list_input').css("display", "none");
@@ -50,6 +51,13 @@ $(function(){
       $('#calculate_file').css("display", "block");
       $('#calculate_list').css("display", "block");
       $('#calculate_file_none').css("display", "none");
+    })
+
+    //데이터 입력 컨트롤
+    $('#data_upload_button').click(function() {
+      $('#calculate_file').css("display", "none");
+      $('#calculate_list').css("display", "block");
+      $('#data_upload_file').css("display", "block");
     })
 
     //상단 플랫폼 리스트 슬라이드 컨트롤
@@ -148,7 +156,7 @@ $(function(){
   });
 
   // 선지급 데이터 팝업 컨트롤
-  $("#calculate_list_input > button").click(function(){
+  $("#calculate_payment_button").click(function(){
     $("#popup_bg").css("display", "flex");
     $("#payment_popup").css("display", "flex");
   });

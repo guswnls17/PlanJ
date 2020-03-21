@@ -8,10 +8,59 @@
   padding: 30px 50px;
 }
 
-#notice_add_box > h1 {
-  margin-top: 30px;
+#notice_add_box > #notice_title_box > h1 {
   font-size: 14px;
   font-weight: bold;
+}
+
+#notice_title_box {
+  position: relative;
+  margin-top: 30px;
+  width: 608px;
+  display: flex;
+  flex-direction: row;
+}
+
+#notice_title_box > #notice_userchoice_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0 10px 0 20px;
+  align-items: center;
+  margin-left: auto;
+  width: 120px;
+  height: 28px;
+  border: 1px solid #888;
+  cursor: pointer;
+}
+
+#notice_userchoice_button > #notice_userchoice_tri {
+  margin-left: auto;
+  border-top:6px solid black;
+  border-bottom:6px solid none;
+  border-right: 4px solid transparent;
+  border-left: 4px solid  transparent;
+}
+
+#notice_userchoice_menu {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 32px;
+  right: 0;
+  width: 120px;
+  height: auto;
+  padding: 5px 0;
+  border: 1px solid #888;
+  background-color: white;
+}
+
+#notice_userchoice_menu > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 24px;
 }
 
 #notice_add_box > form {

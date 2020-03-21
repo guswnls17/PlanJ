@@ -115,4 +115,20 @@ $(function(){
     $(".side_bar > ul > li:nth-child(7)").click(function(e) {
       location.replace('../../html/Authority/Authority.html');
     });
+
+    //유저 선택 토글 박스 컨트롤
+    
+    $("#notice_userchoice_button").click(function() {
+      var toggleBoolean = $("#notice_userchoice_menu").css("display")
+      if(toggleBoolean === "block"){
+        $("#notice_userchoice_menu").css("display", "none");
+      } if(toggleBoolean === "none") {
+        $("#notice_userchoice_menu").css("display", "block");
+      }
+    });
+    $("#notice_userchoice_menu > div").click(function() {
+      var menuText = $(this).children('p').text()
+      $("#notice_userchoice_menu").css("display", "none");
+      $("#notice_userchoice_button > p").text(menuText);
+    });
 });
